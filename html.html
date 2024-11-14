@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Learn Go - XYNTAX</title>
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <style>
+          .hero {
+            background: url("https://github.com/yousufhk/Image-Xantys/blob/main/15.png?raw=true")
+              no-repeat center center;
+            background-size: cover;
+            color: white;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+          }
+        </style>
+        <script src="script.js"></script>
+      </head>
+<body class="bg-dark text-white">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">XANTYS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Courses</a>
+                      </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="html.html">Html</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="css.html">Css</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="javascript.html">Javascript</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="python.html">Python</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="c.html">C</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="go.html">Golang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+          <h1>HTML Fundamentals</h1>
+          <p>Building the Web, One Tag at a Time.</p>
+        </div>
+      </section>
+    
+    <div class="container mt-4 ctn-div">
+
+        <div class="container my-3">
+            <button class="btn btn-outline-light" onclick="goBack()">← Back</button>
+        </div>
+        
+
+        <!-- Chapter Structure -->
+        <div class="accordion mt-4" id="htmlChapters">
+
+            <!-- Introduction -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingIntro">
+                    <button 
+                    class="accordion-button colors-html collapsed" 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#collapseIntro" 
+                    aria-expanded="false" 
+                    aria-controls="collapseIntro">
+                        Introduction to HTML
+                    </button>
+                </h2>
+                <div 
+                    id="collapseIntro" 
+                    class="accordion-collapse collapse" 
+                    aria-labelledby="headingIntro" 
+                    data-bs-parent="#htmlChapters">
+                        <div class="accordion-body">
+                            <p>HTML (HyperText Markup Language) is the standard language used to create web pages. It describes the structure of a webpage using markup. HTML elements are the building blocks of HTML pages.</p>
+                            <p>An HTML document is structured with a series of elements, each consisting of tags. Here's the basic structure of an HTML document:</p>
+                            <div class="container-code">
+                                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                    </svg></button>
+                            <pre><code class="code-color">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;This is a Heading&lt;/h1&gt;
+        &lt;p&gt;This is a paragraph.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Basic HTML Tags -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="basicTags">
+                    <button class="accordion-button collapsed colors-html" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBasicTags" aria-expanded="false" aria-controls="collapseBasicTags">
+                        Basic HTML Tags
+                    </button>
+                </h2>
+                <div id="collapseBasicTags" class="accordion-collapse collapse" aria-labelledby="basicTags" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>HTML tags are used to create elements on a webpage. Here are some of the most commonly used basic HTML tags:</p>
+                        <ul>
+                            <li><code class="codecolors">&lt;DOCTYPE&gt;</code> - Defines the document type and version of HTML.</li>
+                            <li><code class="codecolors">&lt;html&gt;</code> - Root element of an HTML page.</li>
+                            <li><code class="codecolors">&lt;head&gt;</code> - Contains meta-information about the document.</li>
+                            <li><code class="codecolors">&lt;title&gt;</code> - Sets the title of the webpage (shown in the browser tab).</li>
+                            <li><code class="codecolors">&lt;body&gt;</code> - Contains the content of the webpage.</li>
+                            <li><code class="codecolors">&lt;h1&gt; to &lt;h6&gt;</code> - Heading tags, where &lt;h1&gt; is the highest level and &lt;h6&gt; the lowest.</li>
+                            <li><code class="codecolors">&lt;p&gt;</code> - Paragraph tag.</li>
+                            <li><code class="codecolors">&lt;a&gt;</code> - Anchor tag for creating links.</li>
+                            <li><code class="codecolors">&lt;img&gt;</code> - Embeds an image.</li>
+                            <li><code class="codecolors">&lt;div&gt;</code> - Defines a division or section in a document.</li>
+                            <li><code class="codecolors">&lt;span&gt;</code> - Inline container for text.</li>
+                        </ul>
+                        <p>Examples of Basic Tags:</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                        <pre><code class="code-color">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My First Page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+        &lt;p&gt;This is a simple paragraph.&lt;/p&gt;
+        &lt;a href="https://www.example.com"&gt;Visit Example.com&lt;/a&gt;
+        &lt;img src="image.jpg" alt="Description of image"&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text Formatting -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="textFormatting">
+                    <button class="accordion-button collapsed colors-html" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTextFormatting" aria-expanded="false" aria-controls="collapseTextFormatting">
+                        Text Formatting Tags
+                    </button>
+                </h2>
+                <div id="collapseTextFormatting" class="accordion-collapse collapse" aria-labelledby="textFormatting" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>HTML provides several tags to format text on a webpage:</p>
+                        <ul>
+                            <li><code class="codecolors">&lt;strong&gt;</code> - Defines important text (usually displayed in bold).</li>
+                            <li><code class="codecolors">&lt;em&gt;</code> - Emphasizes text (usually displayed in italics).</li>
+                            <li><code class="codecolors">&lt;br&gt;</code> - Inserts a line break.</li>
+                            <li><code class="codecolors">&lt;hr&gt;</code> - Inserts a thematic break (horizontal rule).</li>
+                            <li><code class="codecolors">&lt;blockquote&gt;</code> - Defines a section quoted from another source.</li>
+                            <li><code class="codecolors">&lt;code&gt;</code> - Defines a piece of computer code.</li>
+                            <li><code class="codecolors">&lt;pre&gt;</code> - Defines preformatted text.</li>
+                        </ul>
+                        <p>Example:</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                        <pre><code class="code-color">&lt;p&gt;This is a &lt;strong&gt;bold&lt;/strong&gt; word and this is an &lt;em&gt;italic&lt;/em&gt; word.&lt;/p&gt;
+&lt;p&gt;Line one.&lt;br&gt;Line two.&lt;/p&gt;
+&lt;blockquote&gt;
+    This is a blockquote.
+&lt;/blockquote&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Links and Images -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="linksAndImages">
+                    <button class="accordion-button collapsed colors-html" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLinksAndImages" aria-expanded="false" aria-controls="collapseLinksAndImages">
+                        Links and Images
+                    </button>
+                </h2>
+                <div id="collapseLinksAndImages" class="accordion-collapse collapse" aria-labelledby="linksAndImages" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>Creating hyperlinks and embedding images are fundamental aspects of web development:</p>
+                        <p><strong>Links (&lt;a&gt; Tag)</strong></p>
+                        <p>The <code class="codecolors">&lt;a&gt;</code> tag defines a hyperlink, which is used to link from one page to another.</p>
+                        <ul>
+                            <li><code class="codecolors">href</code - Specifies the URL of the page the link goes to.</li>
+                            <li><code class="codecolors">target</code - Specifies where to open the linked document.</li>
+                            <li><code class="codecolors">title</code - Specifies extra information about the link (displayed as a tooltip).</li>
+                        </ul>
+                        <p>Example:</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                            <pre><code class="code-color">&lt;a href="https://www.example.com" target="_blank" title="Visit Example.com"&gt;Visit Example&lt;/a&gt;</code></pre>
+                        </div>
+                        <p class="space-div"><strong>Images (&lt;img&gt; Tag)</strong></p>
+                        <p>The <code class="codecolors">&lt;img&gt;</code> tag is used to embed images in an HTML page. It is a self-closing tag and requires the following attributes:</p>
+                        <ul>
+                            <li><code class="codecolors">src</code> - Specifies the path to the image.</li>
+                            <li><code class="codecolors">alt</code> - Provides alternative text for the image if it cannot be displayed.</li>
+                            <li><code class="codecolors">width and height</code> - Define the size of the image.</li>
+                        </ul>
+                        <p>Example:</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                            <pre id="code-text"><code class="codecolors">&lt;img src="image.jpg" alt="Description of image" width="500" height="600"&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lists -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="lists">
+                    <button class="accordion-button collapsed colors-html" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLists" aria-expanded="false" aria-controls="collapseLists">
+                        Lists
+                    </button>
+                </h2>
+                <div id="collapseLists" class="accordion-collapse collapse" aria-labelledby="lists" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>HTML supports ordered and unordered lists, as well as definition lists:</p>
+                        <ul>
+                            <li><code class="codecolors">&lt;ul&gt;</code> - Unordered list (bulleted).</li>
+                            <li><code class="codecolors">&lt;ol&gt;</code> - Ordered list (numbered).</li>
+                            <li><code class="codecolors">&lt;li&gt;</code> - List item.</li>
+                            <li><code class="codecolors">&lt;dl&gt;</code> - Definition list.</li>
+                            <li><code class="codecolors">>&lt;dt&gt;</code> - Definition term.</li>
+                            <li><code class="codecolors">&lt;dd&gt;</code> - Definition description.</li>
+                        </ul>
+                        <p><strong>Unordered List Example:</strong></p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                        <pre><code class="code-color">&lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                        </div>
+                        <p class="space-div"><strong>Ordered List Example:</strong></p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                        <pre><code class="code-color">&lt;ol&gt;
+    &lt;li&gt;First item&lt;/li&gt;
+    &lt;li&gt;Second item&lt;/li&gt;
+    &lt;li&gt;Third item&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                        </div>
+                        <p class="space-div"><strong>Definition List Example:</strong></p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                        <pre><code class="code-color">&lt;dl&gt;
+    &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+
+    &lt;dt&gt;CSS&lt;/dt&gt;
+    &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tables -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="tables">
+                    <button class="accordion-button collapsed colors-html" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTables" aria-expanded="false" aria-controls="collapseTables">
+                        Tables
+                    </button>
+                </h2>
+                <div id="collapseTables" class="accordion-collapse collapse" aria-labelledby="tables" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>Tables are used to display data in a structured format:</p>
+                        <ul>
+                            <li><code class="codecolors">&lt;table&gt;</code> - Defines a table.</li>
+                            <li><code class="codecolors">&lt;tr&gt;</code> - Defines a table row.</li>
+                            <li><code class="codecolors">&lt;th&gt;</code> - Defines a header cell in a table.</li>
+                            <li><code class="codecolors">&lt;td&gt;</code> - Defines a standard cell in a table.</li>
+                            <li><code class="codecolors">&lt;thead&gt;</code> - Groups the header content in a table.</li>
+                            <li><code class="codecolors">&lt;thead&gt;</code> - Groups the header content in a table.</li>
+                            <li><code class="codecolors">&lt;tbody&gt;</code> - Groups the body content in a table.</li>
+                            <li><code class="codecolors">&lt;tfoot&gt;</code> - Groups the footer content in a table.</li>
+                            <li><code class="codecolors">colspan and rowspan</code> - Attributes to span multiple columns or rows.</li>
+                        </ul>
+                        <p>Table Example:</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                        <pre><code class="code-color">&lt;table class="table table-striped"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Name&lt;/th&gt;
+            &lt;th&gt;Age&lt;/th&gt;
+            &lt;th&gt;City&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;John Doe&lt;/td&gt;
+            &lt;td&gt;30&lt;/td&gt;
+            &lt;td&gt;New York&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Jane Smith&lt;/td&gt;
+            &lt;td&gt;25&lt;/td&gt;
+            &lt;td&gt;Los Angeles&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Forms -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="forms">
+                    <button class="accordion-button collapsed colors-html" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForms" aria-expanded="false" aria-controls="collapseForms">
+                        Forms
+                    </button>
+                </h2>
+                <div id="collapseForms" class="accordion-collapse collapse" aria-labelledby="forms" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>Forms are used to collect user input:</p>
+                        <ul>
+                            <li><code class="codecolors">&lt;form&gt;</code> - Defines an HTML form.</li>
+                            <li><code class="codecolors">&lt;input&gt;</code> - Defines an input control.</li>
+                            <li><code class="codecolors">&lt;label&gt;</code> - Defines a label for an input element.</li>
+                            <li><code class="codecolors">&lt;textarea&gt;</code> - Defines a multi-line text input control.</li>
+                            <li><code class="codecolors">&lt;button&gt;</code> - Defines a clickable button.</li>
+                            <li><code class="codecolors">&lt;select&gt;</code> - Defines a drop-down list.</li>
+                            <li><code class="codecolors">&lt;option&gt;</code> - Defines an option in a drop-down list.</li>
+                            <li><code class="codecolors">&lt;fieldset&gt;</code> - Groups related elements in a form.</li>
+                            <li><code class="codecolors">&lt;legend&gt;</code> - Defines a caption for a &lt;fieldset&gt;.</li>
+                        </ul>
+                        <p>Form Example:</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                        <pre><code class="code-color">&lt;form action="/submit_form" method="post"&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;Personal Information&lt;/legend&gt;
+        
+        &lt;div class="form-group"&gt;
+            &lt;label for="name"&gt;Name:&lt;/label&gt;
+            &lt;input type="text" id="name" name="name" class="form-control" required&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="form-group"&gt;
+            &lt;label for="email"&gt;Email:&lt;/label&gt;
+            &lt;input type="email" id="email" name="email" class="form-control" required&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="form-group"&gt;
+            &lt;label for="gender"&gt;Gender:&lt;/label&gt;
+            &lt;select id="gender" name="gender" class="form-control"&gt;
+                &lt;option value="male"&gt;Male&lt;/option&gt;
+                &lt;option value="female"&gt;Female&lt;/option&gt;
+                &lt;option value="other"&gt;Other&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        
+        &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+    &lt;/fieldset&gt;
+&lt;/form&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Media Elements -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="media">
+                    <button class="accordion-button collapsed colors-html" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMedia" aria-expanded="false" aria-controls="collapseMedia">
+                        Media Elements
+                    </button>
+                </h2>
+                <div id="collapseMedia" class="accordion-collapse collapse" aria-labelledby="media" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>HTML provides elements to embed different types of media:</p>
+                        <ul>
+                            <li><code class="codecolors">&lt;audio&gt;</code> - Embeds sound content.</li>
+                            <li><code class="codecolors">&lt;video&gt;</code> - Embeds video content.</li>
+                            <li><code class="codecolors">&lt;source&gt;</code> - Specifies multiple media resources for media elements.</li>
+                            <li><code class="codecolors">&lt;embed&gt;</code> - Embeds external content.</li>
+                            <li><code class="codecolors">&lt;iframe&gt;</code> - Embeds another HTML page within the current page.</li>
+                            <li><code class="codecolors">&lt;canvas&gt;</code> - Used to draw graphics via scripting (usually JavaScript).</li>
+                            <li><code class="codecolors">&lt;svg&gt;</code> - Defines scalable vector graphics.</li>
+                        </ul>
+                        <p>Video Example:</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                        <pre><code class="code-color">&lt;video width="600" controls&gt;
+    &lt;source src="movie.mp4" type="video/mp4"&gt;
+    &lt;source src="movie.ogg" type="video/ogg"&gt;
+    Your browser does not support the video tag.
+&lt;/video&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Semantic HTML Elements -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="semantic">
+                    <button class="accordion-button collapsed colors-html" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSemantic" aria-expanded="false" aria-controls="collapseSemantic">
+                        Semantic HTML Elements
+                    </button>
+                </h2>
+                <div id="collapseSemantic" class="accordion-collapse collapse" aria-labelledby="semantic" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>Semantic elements clearly describe their meaning in a human- and machine-readable way. These elements define the structure and layout of a webpage:</p>
+                        <ul>
+                            <li><code class="codecolors">&lt;header&gt;</code> - Represents introductory content or a set of navigational links.</li>
+                            <li><code class="codecolors">&lt;nav&gt;</code> - Defines a set of navigation links.</li>
+                            <li><code class="codecolors">&lt;main&gt;</code> - Specifies the main content of a document.</li>
+                            <li><code class="codecolors">&lt;section&gt;</code> - Defines a section in a document.</li>
+                            <li><code class="codecolors">&lt;article&gt;</code> - Defines an independent, self-contained content.</li>
+                            <li><code class="codecolors">&lt;aside&gt;</code> - Defines content aside from the main content.</li>
+                            <li><code class="codecolors">&lt;footer&gt;</code> - Defines a footer for a document or section.</li>
+                            <li><code class="codecolors">&lt;figure&gt;</code> and <code class="codecolors">&lt;figcaption&gt;</code> - Used for self-contained content, like images with captions.</li>
+                        </ul>
+                        <p>Semantic Elements Example:</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                        <pre><code class="code-color">&lt;header&gt;
+    &lt;h1&gt;My Website&lt;/h1&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+    &lt;article&gt;
+        &lt;h2&gt;Article Title&lt;/h2&gt;
+        &lt;p&gt;This is an article.&lt;/p&gt;
+    &lt;/article&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+    &lt;p&gt;&amp;copy; 2024 My Website&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HTML5 New Elements -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="html5">
+                    <button class="accordion-button collapsed colors-html" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml5" aria-expanded="false" aria-controls="collapseHtml5">
+                        HTML5 New Elements
+                    </button>
+                </h2>
+                <div id="collapseHtml5" class="accordion-collapse collapse" aria-labelledby="html5" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>HTML5 introduced several new elements to enhance the semantic structure and multimedia capabilities of web pages:</p>
+                        <ul>
+                            <li><code class="codecolors">&lt;article&gt;</code> - Represents a self-contained composition.</li>
+                            <li><code class="codecolors">&lt;section&gt;</code> - Defines a section in a document.</li>
+                            <li><code class="codecolors">&lt;nav&gt;</code> - Defines navigation links.</li>
+                            <li><code class="codecolors">&lt;aside&gt;</code> - Defines content aside from the main content.</li>
+                            <li><code class="codecolors">&lt;header&gt;</code> - Defines a header for a document or section.</li>
+                            <li><code class="codecolors">&lt;footer&gt;</code> - Defines a footer for a document or section.</li>
+                            <li><code class="codecolors">&lt;figure&gt;</code> - Represents self-contained content, often with a &lt;figcaption&gt;.</li>
+                            <li><code class="codecolors">&lt;figcaption&gt;</code> - Provides a caption for a &lt;figure&gt;.</li>
+                            <li><code class="codecolors">&lt;mark&gt;</code> - Highlights text.</li>
+                            <li><code class="codecolors">&lt;progress&gt;</code> - Displays the progress of a task.</li>
+                            <li><code class="codecolors">&lt;output&gt;</code> - Represents the result of a calculation or user action.</li>
+                            <li><code class="codecolors">&lt;meter&gt;</code> - Represents a scalar value within a known range.</li>
+                        </ul>
+                        <p>HTML5 New Elements Example:</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                        <pre><code class="code-color">&lt;article&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Article Heading&lt;/h1&gt;
+        &lt;p&gt;Published on: &lt;time datetime="2024-09-01"&gt;September 1, 2024&lt;/time&gt;&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;p&gt;This is the article content.&lt;/p&gt;
+    &lt;footer&gt;
+        &lt;p&gt;Author: John Doe&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/article&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="text-center bg-black">
+    <div class="container">
+      <p>&copy; 2024 XANTYS. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - XANTYS</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #121212;
+        color: #f5f5f5;
+      }
+
+      .navbar {
+        background-color: #1c1c1c;
+      }
+
+      .footer {
+        background-color: #1c1c1c;
+        color: #f5f5f5;
+      }
+
+      .hero {
+        background: url("https://github.com/yousufhk/Image-Xantys/blob/main/3.png?raw=true")
+          no-repeat center center;
+        background-size: cover;
+        color: white;
+        height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+
+      .card {
+        background-color: #1e1e1e;
+        border: none;
+        color: aliceblue;
+      }
+
+      .card-body {
+        margin: 20px;
+        padding: 20px;
+      }
+
+      .mycard {
+        padding: 10px;
+        margin: 10px;
+        background-color: #adb5bd;
+        color: #121212;
+      }
+
+      .card-img-top {
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .team-member {
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .team-member img {
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        margin-bottom: 10px;
+      }
+
+      .team-member a {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body class="bg-dark text-white">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">XANTYS</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="html.html">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="css.html">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript.html">JavaScript</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="python.html">Python</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="c.html">C</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="go.html">Golang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>About Us</h1>
+        <p>Learn more about our mission and team.</p>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Our Mission</h2>
+        <p class="text-center">
+          At XANTYS, we strive to empower individuals with the skills needed to
+          excel in the tech industry. Our mission is to provide high-quality,
+          interactive courses that make learning programming accessible and
+          enjoyable for everyone.
+        </p>
+        <div class="row mt-5">
+          <div class="col-md-6">
+            <div class="card mycard">
+              <div class="card-body">
+                <h5 class="card-title">Meet the Team</h5>
+                <p class="card-text">
+                  Our team is composed of passionate educators and industry
+                  experts who are dedicated to helping you succeed.
+                </p>
+                <div class="row text-center">
+                  <!-- Team Member 1 -->
+                  <div class="col-12 col-sm-6 col-lg-4 team-member">
+                    <img
+                      src="https://github.com/yousufhk/Image-Xantys/blob/main/Yousuf.jpeg?raw=true"
+                      alt="Team Member 1"
+                      class="img-fluid mb-2"
+                    />
+                    <a
+                      class="btn btn-warning"
+                      href="https://www.linkedin.com/in/yousuf-hakim/"
+                      >Yousuf Hakim</a
+                    >
+                  </div>
+                  <!-- Team Member 2 -->
+                  <div class="col-12 col-sm-6 col-lg-4 team-member">
+                    <img
+                      src="https://github.com/yousufhk/Image-Xantys/blob/main/Abdullah.jpeg?raw=true"
+                      alt="Team Member 2"
+                      class="img-fluid mb-2"
+                    />
+                    <a
+                      class="btn btn-warning btn-members"
+                      href="https://www.linkedin.com/in/abdullah-abdul-rehaman/"
+                      >Abdullah Kazi</a
+                    >
+                  </div>
+                  <!-- Team Member 3 -->
+                  <div class="col-12 col-sm-6 col-lg-4 team-member">
+                    <img
+                      src="https://github.com/yousufhk/Image-Xantys/blob/main/Javed.jpeg?raw=true"
+                      alt="Team Member 3"
+                      class="img-fluid mb-2"
+                    />
+                    <a
+                      class="btn btn-warning"
+                      href="https://www.linkedin.com/in/javedhakim/"
+                      >Javed Ahmed</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card mycard">
+              <img
+                src="https://github.com/yousufhk/Image-Xantys/blob/main/values.jpg?raw=true"
+                class="card-img-top"
+                alt="Our Values"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Our Values</h5>
+                <p class="card-text">
+                  We believe in innovation, integrity, and inclusivity. These
+                  core values drive our commitment to providing the best
+                  learning experience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center py-3 bg-black">
+      <div class="container">
+        <p>&copy; 2024 XANTYS. All rights reserved.</p>
+        <p>
+          <a href="privacy_policy.html">Privacy Policy</a> |
+          <a href="termsAndCondition.html">Terms of Service</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

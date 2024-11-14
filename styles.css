@@ -1,0 +1,173 @@
+*{
+    font-family: sans-serif;
+}
+/* Enhanced card hover effects */
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+/* Default dark theme */
+body {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Light theme */
+body.light-mode {
+    background-color: #f4f4f4;
+    color: #000000;
+}
+
+/* Adjust navbar for light mode */
+.navbar-light {
+    background-color: #ffffff !important;
+}
+
+body.light-mode .navbar {
+    background-color: #ffffff !important;
+    color: #000000;
+}
+
+
+.scroll-item {
+            display: inline-block;
+            width: 100%;
+            /* height: 150px; */
+            background-color: #f8f9fa;
+            margin-right: 10px;
+            text-align: center;
+            /* line-height: 150px; */
+            border: 1px solid #dee2e6;
+        }
+
+.colors-html {
+    background-color: #cfe2ff;
+}
+
+.code-color {
+    color: #ffd447;
+}
+
+.codecolors {
+    color: #e01e37;
+}
+
+.container-code{
+    background-color: #030027;
+    border-radius: 30px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+}
+
+p {
+    margin-top: 1rem;
+}
+
+pre {
+    margin-bottom: 0;
+}
+
+.text-js {
+    color: #52b69a;
+}
+
+.color-js {
+    background-color: #52b69a;
+}
+
+.text-sub-js {
+    color: #d9ed92;
+}
+
+.text-css {
+    color: #a3c9a8;
+}
+
+.text-c {
+    color: #ffe3e0;
+}
+
+.color-c {
+    background-color: #ffe3e0;
+}
+
+.text-sub-c {
+    color: #ff0a54;
+}
+
+.text-html {
+    color: #cfe2ff;
+}
+
+.color-css {
+    background-color: #d6eadf;
+}
+
+.text-sub {
+    color: #fffdd6;
+}
+
+.text-sub-py {
+    color: #a3cef1;
+}
+
+.text-sub-css {
+    color: #eec6ca;
+}
+
+.python-box {
+    background-color: #ade8f4;
+    color: rgb(98, 0, 255);
+}
+
+.text-quote {
+    color: #ffa200;
+}
+
+.text-qt {
+    color: #f1c0e8;
+}
+
+.colors-python {
+    background-color: #fdfcdc;
+}
+
+.text-python {
+    color: #fdfcdc;
+}
+
+.colors-go {
+    background-color: rgb(255, 246, 199);
+    color: rgb(0, 0, 0);
+}
+
+.container-code {
+    position: relative;
+    margin-top: 10px;
+    padding: 15px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.copy-btn:focus {
+    outline: none;
+}
+
+.copy-btn:active {
+    background-color: #000000;
+}
+
