@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Go - XANTYS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .hero {
+        background: url("https://github.com/yousufhk/Image-Xantys/blob/main/5.png?raw=true")
+          no-repeat center center;
+        background-size: cover;
+        color: white;
+        height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .container {
+        flex: 1;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+    </style>
+    <script src="script.js"></script>
+  </head>
+  <body class="bg-dark text-white">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">XYNTAX</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="html.html">Html</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="css.html">Css</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript.html">Javascript</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="python.html">Python</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="c.html">C</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="go.html">Golang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>GoLang Basics - Coming Soon...</h1>
+        <p>Fast, Efficient, and Scalable - Go Beyond Limits</p>
+      </div>
+    </section>
+
+    <div class="container mt-4 ctn-div">
+      <div class="container my-3">
+        <button class="btn btn-outline-light" onclick="goBack()">← Back</button>
+      </div>
+
+      <!-- Chapter Structure -->
+      <div class="accordion mt-4" id="goChapters">
+        <!-- Why Learn Go -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingIntro">
+            <button
+              class="accordion-button colors-go collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseIntro"
+              aria-expanded="false"
+              aria-controls="collapseIntro"
+            >
+              Why Learn Go?
+            </button>
+          </h2>
+          <div
+            id="collapseIntro"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingIntro"
+            data-bs-parent="#goChapters"
+          >
+            <div class="accordion-body">
+              Go, also known as Golang, is a powerful, open-source programming
+              language created by Google. It’s designed to be fast, efficient,
+              and highly scalable, making it a top choice for modern software
+              development. Whether you’re building web servers, cloud-based
+              applications, or high-performance systems, Go provides simplicity
+              and speed that few other languages can match.
+            </div>
+          </div>
+        </div>
+
+        <!-- What Will You Learn? -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingLearn">
+            <button
+              class="accordion-button colors-go collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseLearn"
+              aria-expanded="false"
+              aria-controls="collapseLearn"
+            >
+              What You Will Learn?
+            </button>
+          </h2>
+          <div
+            id="collapseLearn"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingLearn"
+            data-bs-parent="#goChapters"
+          >
+            <div class="accordion-body">
+              <p>
+                Our upcoming Go course will cover everything you need to become
+                proficient in Golang, from the basics to advanced concepts.
+                Here's what you'll explore:
+              </p>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  Introduction to Go - Learn why Go is different and how it
+                  simplifies complex programming tasks.
+                </li>
+                <li class="list-group-item">
+                  Syntax and Basics - Understand Go's unique syntax, data types,
+                  and control structures.
+                </li>
+                <li class="list-group-item">
+                  Concurrency in Go - Discover how Go's goroutines and channels
+                  make concurrent programming easy and efficient.
+                </li>
+                <li class="list-group-item">
+                  Building Web Servers - Step into backend development by
+                  building fast and reliable web servers with Go.
+                </li>
+                <li class="list-group-item">
+                  Error Handling and Testing - Learn robust error handling
+                  techniques and how to write testable, maintainable code.
+                </li>
+                <li class="list-group-item">
+                  Working with APIs - Dive into RESTful API development with Go,
+                  including JSON handling and HTTP requests.
+                </li>
+                <li class="list-group-item">
+                  Deploying Go Applications - Master the art of deploying Go
+                  applications in production environments.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stay Tuned! -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="stay-tuned">
+            <button
+              class="accordion-button colors-go collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapsestay-tuned"
+              aria-expanded="false"
+              aria-controls="collapsestay-tuned"
+            >
+              Stay Tuned!
+            </button>
+          </h2>
+          <div
+            id="collapsestay-tuned"
+            class="accordion-collapse collapse"
+            aria-labelledby="stay-tuned"
+            data-bs-parent="#goChapters"
+          >
+            <div class="accordion-body">
+              <p>
+                We're gearing up to provide you with the best Golang content to
+                enhance your learning experience. Subscribe for updates, and be
+                the first to dive when they launch!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="text-center bg-black">
+      <div class="container">
+        <p>&copy; 2024 XANTYS. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

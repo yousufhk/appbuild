@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C Core Concept - XANTYS</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .hero {
+        background: url("https://github.com/yousufhk/Image-Xantys/blob/main/11.png?raw=true")
+            no-repeat center center;
+        background-size: cover;
+        color: white;
+        height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        }
+    </style>
+    <script src="script.js"></script>
+    </head>
+<body class="bg-dark text-white">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">XANTYS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Courses</a>
+                      </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="html.html">Html</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="css.html">Css</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="javascript.html">Javascript</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="python.html">Python</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="c.html">C</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="go.html">Golang</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+        <h1>C Core Concept</h1>
+        <p>The Foundation of Code, Powering the Digital World</p>
+        </div>
+    </section>
+
+    <div class="container mt-4 ctn-div">
+
+        <div class="container my-3">
+            <button class="btn btn-outline-light" onclick="goBack()">← Back</button>
+        </div>
+
+      <!-- Chapter Structure -->
+      <div class="accordion mt-4" id="htmlChapters">
+
+        <!-- Introduction -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="intro">
+                <button class="accordion-button color-c collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIntro" aria-expanded="false" aria-controls="collapseIntro">
+                    Introduction to C Programming
+                </button>
+            </h2>
+            <div id="collapseIntro" class="accordion-collapse collapse" aria-labelledby="intro" data-bs-parent="#htmlChapters">
+                <div class="accordion-body">
+                    <p>C is a high-level, general-purpose programming language developed in the 1970s by Dennis Ritchie. It is widely used for system programming, developing operating systems, embedded systems, and applications requiring high performance.</p>
+                    <p>Basic C Program Structure</p>
+                    <div class="container-code">
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                        <pre><code class="code-color">#include &lt;stdio.h&gt;  // Preprocessor directive
+// Main function - Entry point of the program
+int main() {
+// Output statement
+printf("Hello, World!");  
+// Indicates that the program ended successfully
+return 0;
+}</code></pre> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- C Syntax -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="basicTags">
+                <button class="accordion-button collapsed color-c" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBasicTags" aria-expanded="false" aria-controls="collapseBasicTags">
+                    Syntax
+                </button>
+            </h2>
+            <div id="collapseBasicTags" class="accordion-collapse collapse" aria-labelledby="basicTags" data-bs-parent="#htmlChapters">
+                <div class="accordion-body">
+                    <p>C programs are made up of various components, including keywords, identifiers, constants, strings, operators, and semicolons.</p>
+                    <p>Basic Syntax Elements:</p>
+                    <ul>
+                        <li><code class="codecolors">Keywords</code> - Reserved words that have special meaning (e.g., int, return, if).</li>
+                        <li><code class="codecolors">Identifiers:</code> - Names given to variables, functions, etc. (e.g., main, myVariable).</li>
+                        <li><code class="codecolors">Semicolons</code> - Every statement ends with a semicolon (;).</li>
+                        <li><code class="codecolors">Curly Braces</code> - {} mark the beginning and end of functions or control blocks.</li>
+                    </ul>
+                    <p>Examples:</p>
+                    <div class="container-code">
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                    <pre><code class="code-color">#include &lt;stdio.h&gt;
+
+int main() {
+int number = 10;  // Variable declaration and initialization
+printf("Number: %d", number);  // Output
+return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- C Output -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="textFormatting">
+                <button class="accordion-button collapsed color-c" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTextFormatting" aria-expanded="false" aria-controls="collapseTextFormatting">
+                    Output
+                </button>
+            </h2>
+            <div id="collapseTextFormatting" class="accordion-collapse collapse" aria-labelledby="textFormatting" data-bs-parent="#htmlChapters">
+                <div class="accordion-body">
+                    <p>C uses the printf function to display output on the screen. The function is defined in the stdio.h header file.</p>
+                    <p>Syntax of printf:</p>
+                    <div class="container-code">
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                  </svg></button>
+                    <pre><code class="code-color">printf("format string", values...);</code></pre>
+                    </div>
+                    <p class="space-div">Common Format Specifiers:</p>
+                    <ul>
+                        <li><code class="codecolors">%d</code> - Integer</li>
+                        <li><code class="codecolors">%f</code> - Floating-point number</li>
+                        <li><code class="codecolors">%c</code> - Character</li>
+                        <li><code class="codecolors">%s</code> - String</li>
+                    </ul>
+                    <p>Example:</p>
+                    <div class="container-code">
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                  </svg></button>
+                    <pre><code class="code-color">#include &lt;stdio.h&gt;
+
+int main() {
+printf("Hello, World!\n");
+printf("Number: %d\n", 25);
+return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comments -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="linksAndImages">
+                <button class="accordion-button collapsed color-c" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLinksAndImages" aria-expanded="false" aria-controls="collapseLinksAndImages">
+                Comments
+                </button>
+            </h2>
+            <div id="collapseLinksAndImages" class="accordion-collapse collapse" aria-labelledby="linksAndImages" data-bs-parent="#htmlChapters">
+                <div class="accordion-body">
+                    <p>Comments are used to describe code and make it easier to understand. They are ignored by the compiler.</p>
+                    <p>Types of Comments:</p>
+                    <ul>
+                        <li><code class="codecolors">Single-line Comments</code> - Begin with // and extend to the end of the line.</li>
+                        <li><code class="codecolors">Multi-line Comments</code> - Enclosed between /* and */</li>
+                    </ul>
+                    <p>Example:</p>
+                    <div class="container-code">
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                  </svg></button>
+                    <pre><code class="code-color">#include &lt;stdio.h&gt;
+
+int main() {
+// This is a single-line comment
+printf("Hello, World!\n"); 
+/* This is a multi-line comment */
+return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Variables -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="lists">
+                <button class="accordion-button collapsed color-c" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLists" aria-expanded="false" aria-controls="collapseLists">
+                    Variables
+                </button>
+            </h2>
+            <div id="collapseLists" class="accordion-collapse collapse" aria-labelledby="lists" data-bs-parent="#htmlChapters">
+                <div class="accordion-body">
+                    <p>Variables are used to store data that can be manipulated by the program. Each variable has a name, type, and value.</p>
+                    <p>Variable Declaration and Initialization:</p>
+                    <ul>
+                        <li><code class="codecolors">Declaration</code> - Specifies the variable's name and type.</li>
+                        <li><code class="codecolors">Initialization</code> - Assigns an initial value to the variable.</li>
+                    </ul>
+                    <p>Example:</p>
+                    <div class="container-code">
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                  </svg></button>
+                    <pre><code class="code-color">#include &lt;stdio.h&gt;
+
+int main() {
+int age = 20;  // Declaring and initializing an integer variable
+printf("Age: %d", age);
+return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data Types -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="tables">
+                <button class="accordion-button collapsed color-c" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTables" aria-expanded="false" aria-controls="collapseTables">
+                Data Types
+                </button>
+            </h2>
+            <div id="collapseTables" class="accordion-collapse collapse" aria-labelledby="tables" data-bs-parent="#htmlChapters">
+                <div class="accordion-body">
+                    <p>C supports various data types to define the type of data a variable can hold.</p>
+                    <p>Primary Data Types</p>
+                    <ul>
+                        <li><code class="codecolors">int</code> - Integer (whole numbers) - int num = 10;</li>
+                        <li><code class="codecolors">Float</code> - Floating-point numbers (decimal values) - float num = 5.75;</li>
+                        <li><code class="codecolors">char</code> - Single character - char letter = 'A';</li>
+                    </ul>
+                    <p>Derived Data Types</p>
+                    <ul>
+                        <li><code class="codecolors">Arrays</code> - Collection of similar types - int arr[5];</li>
+                        <li><code class="codecolors">Pointers</code> - Holds memory address - int *ptr;</li>
+                        <li><code class="codecolors">Structures</code> -  Collection of different types - struct { int x; float y; };</li>
+                    </ul>
+                    <p>Example:</p>
+                    <div class="container-code">
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                  </svg></button>
+                    <pre><code class="code-color">#include &lt;stdio.h&gt;
+
+int main() {
+char grade = 'A';
+float score = 95.5;
+printf("Grade: %c, Score: %.2f", grade, score);
+return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Constants -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="forms">
+                <button class="accordion-button collapsed color-c" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForms" aria-expanded="false" aria-controls="collapseForms">
+                Constants
+                </button>
+            </h2>
+            <div id="collapseForms" class="accordion-collapse collapse" aria-labelledby="forms" data-bs-parent="#htmlChapters">
+                <div class="accordion-body">
+                    <p>Constants are fixed values that do not change during program execution.</p>
+                    <p>Defining Constants:</p>
+                    <ul>
+                        <li><code class="codecolors">#define Directive</code> - Preprocessor directive for defining constants.</li>
+                        <li><code class="codecolors">const Keyword</code> - Declares a variable as constant.</li>
+                    </ul>
+                    <p>Example:</p>
+                    <div class="container-code">
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                  </svg></button>
+                    <pre><code class="code-color">#include &lt;stdio.h&gt;
+// Define constant using #define
+#define PI 3.14159  
+
+int main() {
+// Define constant using const keyword
+const int MAX = 100;  
+printf("PI: %.2f, MAX: %d", PI, MAX);
+return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Operators -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="media">
+                <button class="accordion-button collapsed color-c" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMedia" aria-expanded="false" aria-controls="collapseMedia">
+                Operators
+                </button>
+            </h2>
+            <div id="collapseMedia" class="accordion-collapse collapse" aria-labelledby="media" data-bs-parent="#htmlChapters">
+                <div class="accordion-body">
+                    <p>Operators are symbols used to perform operations on variables and values.</p>
+                    <p>Types of Operators:</p>
+                    <ul>
+                        <li><code class="codecolors">Arithmetic Operators:</code> +, -, *, /, %</li>
+                        <li><code class="codecolors">Relational Operators:</code> ==, !=, >, <, >=, <=</li>
+                        <li><code class="codecolors">Logical Operators:</code> &&, ||, !</li>
+                        <li><code class="codecolors">Assignment Operators:</code> =, +=, -=, etc.</li>
+                    </ul>
+                    <p>Example:</p>
+                    <div class="container-code">
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                  </svg></button>
+                    <pre><code class="code-color">#include &lt;stdio.h&gt;
+
+int main() {
+int a = 10, b = 20;
+printf("Sum: %d\n", a + b);  // Addition
+printf("Comparison: %d\n", a > b);  // Greater than
+return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- If...Else -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="semantic">
+                <button class="accordion-button collapsed color-c" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSemantic" aria-expanded="false" aria-controls="collapseSemantic">
+                If...Else Statement
+                </button>
+            </h2>
+            <div id="collapseSemantic" class="accordion-collapse collapse" aria-labelledby="semantic" data-bs-parent="#htmlChapters">
+                <div class="accordion-body">
+                    <p>The if...else statement allows conditional execution of code blocks.</p>
+                    <p>Syntax:</p>
+                    <div class="container-code">
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                  </svg></button>
+                    <pre><code class="code-color">if (condition) {
+// Code block if condition is true
+} else {
+// Code block if condition is false
+}</code></pre>
+                    </div>
+                    <p class="space-div">Example:</p>
+                    <div class="container-code">
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                  </svg></button>
+                    <pre><code class="code-color">#include &lt;stdio.h&gt;
+
+int main() {
+int num = 10;
+if (num > 5) {
+    printf("Number is greater than 5");
+} else {
+    printf("Number is not greater than 5");
+}
+return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Switch Statement -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="CssBorder">
+                <button class="accordion-button collapsed color-c" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCssBorder" aria-expanded="false" aria-controls="collapseCssBorder">
+                Switch Statement
+                </button>
+            </h2>
+            <div id="collapseCssBorder" class="accordion-collapse collapse" aria-labelledby="CssBorder" data-bs-parent="#htmlChapters">
+                <div class="accordion-body">
+                    <p>The switch statement is used to select one of many code blocks to be executed.</p>
+                    <p>Syntax:</p>
+                    <div class="container-code">
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                    <pre><code class="code-color">switch (expression) {
+case value1:
+    // Code to be executed if expression == value1
+    break;
+case value2:
+    // Code to be executed if expression == value2
+    break;
+default:
+    // Code to be executed if no case matches
+}</code></pre>
+                    </div>
+                    <p class="space-div">Example:</p>
+                    <div class="container-code">
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                  </svg></button>
+                    <pre><code class="code-color">#include &lt;stdio.h&gt;
+
+int main() {
+int day = 3;
+switch (day) {
+    case 1:
+        printf("Monday");
+        break;
+    case 2:
+        printf("Tuesday");
+        break;
+    case 3:
+        printf("Wednesday");
+        break;
+    default:
+        printf("Invalid day");
+}
+return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- While Loop -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="cssforms">
+                <button class="accordion-button collapsed color-c" type="button" data-bs-toggle="collapse" data-bs-target="#collapsecssforms" aria-expanded="false" aria-controls="collapsecssforms">
+                While Loop
+                </button>
+            </h2>
+            <div id="collapsecssforms" class="accordion-collapse collapse" aria-labelledby="cssforms" data-bs-parent="#htmlChapters">
+                <div class="accordion-body">
+                    <p>The while loop executes a block of code as long as the specified condition is true.</p>
+                    <p>Syntax:</p>
+                    <div class="container-code">
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                  </svg></button>
+                    <pre><code class="code-color">while (condition) {
+// Code block
+}</code></pre>
+                    </div>
+                    <p class="space-div">Example:</p>
+                    <div class="container-code">
+                    <pre><code class="code-color">#include &lt;stdio.h&gt;
+
+int main() {
+int i = 0;
+while (i < 5) {
+    printf("i = %d\n", i);
+    i++;
+}
+return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- For Loop -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="html5">
+                <button class="accordion-button collapsed color-c" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml5" aria-expanded="false" aria-controls="collapseHtml5">
+                For Loop
+                </button>
+            </h2>
+            <div id="collapseHtml5" class="accordion-collapse collapse" aria-labelledby="html5" data-bs-parent="#htmlChapters">
+                <div class="accordion-body">
+                    <p>The for loop is used for repetitive tasks with a known number of iterations.</p>
+                    <p>Syntax:</p>
+                    <div class="container-code">
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                  </svg></button>
+                    <pre><code class="code-color">for (initialization; condition; increment) {
+// Code block
+}</code></pre>
+                    </div>
+                    <p class="space-div">Example:</p>
+                    <div class="container-code">
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                  </svg></button>
+                    <pre><code class="code-color">#include &lt;stdio.h&gt;
+
+int main() {
+for (int i = 0; i < 5; i++) {
+    printf("i = %d\n", i);
+}
+return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Break/Continue -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="cssdrop">
+                <button class="accordion-button collapsed color-c" type="button" data-bs-toggle="collapse" data-bs-target="#collapsecssdrop" aria-expanded="false" aria-controls="collapsecssdrop">
+                Break/Continue
+                </button>
+            </h2>
+            <div id="collapsecssdrop" class="accordion-collapse collapse" aria-labelledby="cssdrop" data-bs-parent="#htmlChapters">
+                <div class="accordion-body">
+                    <p>break and continue are used to control loop execution.</p>
+                    <p>CSS Dropdown Example:</p>
+                    <ul>
+                    <li><code class="codecolors">break</code> - Exits the loop immediately.</li>
+                    <li><code class="codecolors">continue</code> - Skips the current iteration and proceeds to the next.</li>
+                    </ul>
+                    <div class="container-code">
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                  </svg></button>
+                    <pre><code class="code-color">#include &lt;stdio.h&gt;
+
+int main() {
+for (int i = 0; i < 10; i++) {
+    if (i == 5) {
+        break;  // Exit loop when i is 5
+    }
+    if (i == 3) {
+        continue;  // Skip the rest of the loop when i is 3
+    }
+    printf("i = %d\n", i);
+}
+return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Arrays -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="cssmedia">
+                <button class="accordion-button collapsed color-c" type="button" data-bs-toggle="collapse" data-bs-target="#collapsecssmedia" aria-expanded="false" aria-controls="collapsecssmedia">
+                Arrays
+                </button>
+            </h2>
+            <div id="collapsecssmedia" class="accordion-collapse collapse" aria-labelledby="cssmedia" data-bs-parent="#htmlChapters">
+                <div class="accordion-body">
+                    <p>Arrays store multiple values of the same type in a single variable.</p>
+                    <p>Syntax:</p>
+                    <div class="container-code">
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                              </svg></button>
+                    <pre><code class="code-color">data_type array_name[array_size];</code></pre>
+                    </div>
+                    <p class="space-div">Example:</p>
+                    <div class="container-code">
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                  </svg></button>
+                    <pre><code class="code-color">#include &lt;stdio.h&gt;
+
+int main() {
+    int numbers[5] = {1, 2, 3, 4, 5};
+    printf("First element: %d", numbers[0]);
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Strings -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="strings">
+                <button class="accordion-button collapsed color-c" type="button" data-bs-toggle="collapse" data-bs-target="#collapsestrings" aria-expanded="false" aria-controls="collapsestrings">
+                    Strings
+                </button>
+            </h2>
+            <div id="collapsestrings" class="accordion-collapse collapse" aria-labelledby="strings" data-bs-parent="#htmlChapters">
+                <div class="accordion-body">
+                    <p>Strings in C are arrays of characters ending with a null character \0</p>
+                    <p>Example:</p>
+                    <div class="container-code">
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                  </svg></button>
+                    <pre><code class="code-color">#include &lt;stdio.h&gt;
+
+int main() {
+    char name[] = "John";
+    printf("Name: %s", name);
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- pointers -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="pointers">
+                <button class="accordion-button collapsed color-c" type="button" data-bs-toggle="collapse" data-bs-target="#collapsepointers" aria-expanded="false" aria-controls="collapsepointers">
+                    Pointers
+                </button>
+            </h2>
+            <div id="collapsepointers" class="accordion-collapse collapse" aria-labelledby="pointers" data-bs-parent="#htmlChapters">
+                <div class="accordion-body">
+                    <p>Pointers store the memory address of another variable.</p>
+                    <p>Syntax:</p>
+                    <div class="container-code">
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                  </svg></button>
+                    <pre><code class="code-color">data_type *pointer_name;</code></pre>
+                    </div>
+                    <p class="space-div">Example:</p>
+                    <div class="container-code">
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                  </svg></button>
+                    <pre><code class="code-color">#include &lt;stdio.h&gt;
+
+int main() {
+    int num = 10;
+    int *ptr = &num;  // Pointer to num
+    printf("Value of num: %d\n", *ptr);  // Dereference pointer to access value
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- User Input -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="userinput">
+                <button class="accordion-button collapsed color-c" type="button" data-bs-toggle="collapse" data-bs-target="#collapseuserinput" aria-expanded="false" aria-controls="collapseuserinput">
+                    User Input 
+                </button>
+            </h2>
+            <div id="collapseuserinput" class="accordion-collapse collapse" aria-labelledby="userinput" data-bs-parent="#htmlChapters">
+                <div class="accordion-body">
+                    <p>C uses <code class="codecolors">scanf</code> to get input from the user.</p>
+                    <p>Example:</p>
+                    <div class="container-code">
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                  </svg></button>
+                    <pre><code class="code-color">#include &lt;stdio.h&gt;
+
+int main() {
+    int age;
+    printf("Enter your age: ");
+    scanf("%d", &age);  // Input integer
+    printf("Your age is %d", age);
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Memory Address -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="memaddress">
+                <button class="accordion-button collapsed color-c" type="button" data-bs-toggle="collapse" data-bs-target="#collapsememaddress" aria-expanded="false" aria-controls="collapsememaddress">
+                    Memory Address
+                </button>
+            </h2>
+            <div id="collapsememaddress" class="accordion-collapse collapse" aria-labelledby="memaddress" data-bs-parent="#htmlChapters">
+                <div class="accordion-body">
+                    <p>Memory addresses can be accessed using the & (address-of) operator.</p>
+                    <p>Example:</p>
+                    <div class="container-code">
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                    <pre><code class="code-color">#include &lt;stdio.h&gt;
+
+int main() {
+    int num = 10;
+    printf("Memory address of num: %p", &num);  // %p is used for addresses
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<footer class="text-center bg-black">
+    <div class="container">
+      <p>&copy; 2024 XANTYS. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

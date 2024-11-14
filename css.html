@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Learn Go - XANTYS</title>
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <style>
+          .hero {
+            background: url("https://github.com/yousufhk/Image-Xantys/blob/main/12.png?raw=true")
+              no-repeat center center;
+            background-size: cover;
+            color: white;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+          }
+        </style>
+        <script src="script.js"></script>
+      </head>
+<body class="bg-dark text-white">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">XANTYS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Courses</a>
+                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="html.html">Html</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="css.html">Css</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript.html">Javascript</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="python.html">Python</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="c.html">C</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="go.html">Golang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+            <h1>CSS Mastery</h1>
+            <p>Style Your Vision, Paint the Web</p>
+            </div>
+        </section>
+
+       <div class="container mt-4 ctn-div">
+        
+        <div class="container my-3">
+            <button class="btn btn-outline-light" onclick="goBack()">← Back</button>
+        </div>
+
+        <!-- Chapter Structure -->
+        <div class="accordion mt-4" id="htmlChapters">
+
+            <!-- Introduction -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="intro">
+                    <button class="accordion-button color-css collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIntro" aria-expanded="false" aria-controls="collapseIntro">
+                        Introduction to CSS
+                    </button>
+                </h2>
+                <div id="collapseIntro" class="accordion-collapse collapse" aria-labelledby="intro" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>CSS (Cascading Style Sheets) is a language used to style the layout of web pages. It controls the appearance of HTML elements, including colors, fonts, spacing, and positioning.</p>
+                        <p>CSS rules consist of selectors and declarations. A declaration includes a property and its value, defining how the selected element(s) should be styled.</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                            <pre><code class="code-color">css selector {
+    property: value;
+}                       </code></pre> 
+                        </div>
+
+                        <p class="space-div">Example of Basic Css:</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                            <pre><code class="code-color">body {
+    background-color: lightblue;
+}
+h1 {
+    color: blue;
+    font-size: 24px;
+}                       </code></pre> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- CSS Selectors -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="basicTags">
+                    <button class="accordion-button collapsed color-css" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBasicTags" aria-expanded="false" aria-controls="collapseBasicTags">
+                        CSS Selectors
+                    </button>
+                </h2>
+                <div id="collapseBasicTags" class="accordion-collapse collapse" aria-labelledby="basicTags" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>CSS selectors are used to select the HTML elements you want to style:</p>
+                        <ul>
+                            <li><code class="codecolors">(Universal Selector)</code> - It selects all elements.</li>
+                            <li><code class="codecolors">Element (Type Selector)</code> - It selects all elements of a specific type (e.g., p, h1).</li>
+                            <li><code class="codecolors">.class (Class Selector)</code> - It selects all elements with the specified class.</li>
+                            <li><code class="codecolors">#id (ID Selector)</code> - It selects the element with the specific ID.</li>
+                            <li><code class="codecolors">element1 element2 (Descendant Combinator)</code> - It selects element2 inside element1.</li>
+                            <li><code class="codecolors">element1 > element2 (Child Combinator)</code> -  It selects direct children.</li>
+                            <li><code class="codecolors">element1 + element2 (Adjacent Sibling)</code> - It selects the first element2 immediately following element1.</li>
+                            <li><code class="codecolors">element1 ~ element2 (General Sibling)</code> - It selects all element2 siblings of element1.</li>
+                        </ul>
+                        <p>Examples of CSS Selectors:</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                            <pre><code class="code-color">/* Selects all paragraphs */
+p {
+    color: green;
+}
+
+/* Selects the element with the ID 'header' */
+#header {
+    font-size: 20px;
+}
+
+/* Selects elements with the class 'note' */
+.note {
+    background-color: yellow;
+}
+
+/* Selects all &lt;li&gt; elements inside &lt;ul&gt; */
+ul li {
+    list-style-type: square;
+}                       </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CSS Box Model -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="textFormatting">
+                    <button class="accordion-button collapsed color-css" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTextFormatting" aria-expanded="false" aria-controls="collapseTextFormatting">
+                        CSS Box Model
+                    </button>
+                </h2>
+                <div id="collapseTextFormatting" class="accordion-collapse collapse" aria-labelledby="textFormatting" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>The CSS box model describes the rectangular boxes that are generated for elements in the document tree.</p>
+                        <p>Box Model Components:</p>
+                        <ul>
+                            <li><code class="codecolors">Content</code> - The content of the box, where text and images appear.</li>
+                            <li><code class="codecolors">Padding</code> - It clears an area around the content (inside the border).</li>
+                            <li><code class="codecolors">Border</code> - A border that surrounds the padding (if any) and content.</li>
+                            <li><code class="codecolors">Margin</code> - It clears an area outside the border (outermost layer).</li>
+                            <li><code class="codecolors">width, height</code> - It defines the width and height of the content area.</li>
+                        </ul>
+                        <p>Example:</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                            <pre><code class="code-color">div {
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 15px;
+}                       </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CSS Flexbox -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="linksAndImages">
+                    <button class="accordion-button collapsed color-css" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLinksAndImages" aria-expanded="false" aria-controls="collapseLinksAndImages">
+                        CSS Flexbox
+                    </button>
+                </h2>
+                <div id="collapseLinksAndImages" class="accordion-collapse collapse" aria-labelledby="linksAndImages" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>Flexbox is a layout model that allows items within a container to be aligned and distributed efficiently.</p>
+                        <p>Key Properties:</p>
+                        <ul>
+                            <li><code class="codecolors">display: flex</code> - Defines a flex container.</li>
+                            <li><code class="codecolors">flex-direction</code> - Sets the direction of flex items (row, column).</li>
+                            <li><code class="codecolors">justify-content</code> - Aligns items along the main axis (left, right, center).</li>
+                            <li><code class="codecolors">align-items</code> - Aligns items along the cross-axis (top, center, bottom).</li>
+                            <li><code class="codecolors">flex-wrap</code> - Allows items to wrap onto multiple lines.</li>
+                        </ul>
+                        <p>Example:</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                        <pre><code class="code-color">.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}                       </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CSS Grid -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="lists">
+                    <button class="accordion-button collapsed color-css" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLists" aria-expanded="false" aria-controls="collapseLists">
+                        CSS Grid
+                    </button>
+                </h2>
+                <div id="collapseLists" class="accordion-collapse collapse" aria-labelledby="lists" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>A layout system optimized for two-dimensional layouts, allowing for precise control of rows and columns.</p>
+                        <p>Key Properties:</p>
+                        <ul>
+                            <li><code class="codecolors">display: grid</code> - It defines a grid container.</li>
+                            <li><code class="codecolors">grid-template-columns and grid-template-rows</code> - It define the number and size of columns/rows.</li>
+                            <li><code class="codecolors">grid-column and grid-row</code> - Position items within the grid.</li>
+                            <li><code class="codecolors">gap</code> - Sets the spacing between rows and columns.</li>
+                        </ul>
+                        <p>Example:</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                        <pre><code class="code-color">.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.grid-item {
+    background-color: lightcoral;
+    padding: 20px;
+    text-align: center;
+}                       </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CSS Positioning -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="tables">
+                    <button class="accordion-button collapsed color-css" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTables" aria-expanded="false" aria-controls="collapseTables">
+                        CSS Positioning
+                    </button>
+                </h2>
+                <div id="collapseTables" class="accordion-collapse collapse" aria-labelledby="tables" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>CSS provides several positioning schemes to control the layout of elements.</p>
+                        <p>Position Properties:</p>
+                        <ul>
+                            <li><code class="codecolors">static</code> - Default positioning (not positioned).</li>
+                            <li><code class="codecolors">relative</code> - Positioned relative to its normal position.</li>
+                            <li><code class="codecolors">absolute</code> -Positioned relative to the nearest positioned ancestor.</li>
+                            <li><code class="codecolors">fixed</code> - Positioned relative to the viewport, stays in the same place even when the page is scrolled.</li>
+                            <li><code class="codecolors">sticky</code> - Switches between relative and fixed positioning based on the scroll position.</li>
+                        </ul>
+                        <p>Example:</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                        <pre><code class="code-color">.relative-box {
+    position: relative;
+    left: 20px;
+}
+
+.absolute-box {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}                       </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CSS Colors -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="forms">
+                    <button class="accordion-button collapsed color-css" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForms" aria-expanded="false" aria-controls="collapseForms">
+                        CSS Colors
+                    </button>
+                </h2>
+                <div id="collapseForms" class="accordion-collapse collapse" aria-labelledby="forms" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>CSS allows you to set colors using predefined names, hexadecimal, RGB, RGBA, HSL, and HSLA values.</p>
+                        <p>Color Formats:</p>
+                        <ul>
+                            <li><code class="codecolors">Color Name</code> - red, blue, green, etc.</li>
+                            <li><code class="codecolors">Hex</code> - #ff5733</li>
+                            <li><code class="codecolors">RGB</code> - rgb(255, 87, 51)</li>
+                            <li><code class="codecolors">RGBA</code> - rgba(255, 87, 51, 0.5) (includes transparency)</li>
+                            <li><code class="codecolors">HSL</code> - hsl(9, 100%, 60%)</li>
+                            <li><code class="codecolors">HSLA</code> - hsla(9, 100%, 60%, 0.5)</li>
+                        </ul>
+                        <p>Example:</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                        <pre><code class="code-color">body {
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: rgb(33, 150, 243);
+}
+
+p {
+    color: rgba(33, 150, 243, 0.8);
+}                       </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CSS Typography -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="media">
+                    <button class="accordion-button collapsed color-css" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMedia" aria-expanded="false" aria-controls="collapseMedia">
+                        CSS Typography
+                    </button>
+                </h2>
+                <div id="collapseMedia" class="accordion-collapse collapse" aria-labelledby="media" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>CSS typography allows you to control the appearance of text on your web page.</p>
+                        <p>Typography Properties:</p>
+                        <ul>
+                            <li><code class="codecolors">font-family</code> - Sets the font of the text.</li>
+                            <li><code class="codecolors">font-size</code> - Sets the size of the text.</li>
+                            <li><code class="codecolors">font-weight</code> - Sets the thickness (boldness) of the text.</li>
+                            <li><code class="codecolors">line-height</code> - Sets the spacing between lines of text.</li>
+                            <li><code class="codecolors">text-align</code> - Aligns text (left, right, center, justify).</li>
+                            <li><code class="codecolors">text-transform</code> - Controls capitalization (uppercase, lowercase).</li>
+                            <li><code class="codecolors">text-decoration</code> - Adds decoration to text (underline, line-through).</li>
+                        </ul>
+                        <p>Example:</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                        <pre><code class="code-color">h1 {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}                       </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CSS Transitions and Animations -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="semantic">
+                    <button class="accordion-button collapsed color-css" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSemantic" aria-expanded="false" aria-controls="collapseSemantic">
+                        CSS Transitions and Animations
+                    </button>
+                </h2>
+                <div id="collapseSemantic" class="accordion-collapse collapse" aria-labelledby="semantic" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>CSS transitions and animations allow you to create smooth changes and animations in element styles.</p>
+                        <p>Transitions:</p>
+                        <ul>
+                            <li><code class="codecolors">transition</code> - Specifies the transition effect for CSS properties.</li>
+                            <li><code class="codecolors">transition-property</code> - The CSS property that will change.</li>
+                            <li><code class="codecolors">transition-duration</code> - How long the transition will take.</li>
+                            <li><code class="codecolors">transition-timing-function</code> - The speed curve of the transition.</li>
+                        </ul>
+                        <p>Animations:</p>
+                        <ul>
+                            <li><code class="codecolors">@keyframes</code> - Defines the animation steps.</li>
+                            <li><code class="codecolors">animation-name</code> - Specifies the keyframe name.</li>
+                            <li><code class="codecolors">animation-duration</code> - Sets how long the animation lasts.</li>
+                            <li><code class="codecolors">animation-iteration-count</code> - Sets the number of times the animation runs.</li>
+                        </ul>
+                        <p>Transitions and Animations Example:</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                        <pre><code class="code-color">.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition: background-color 0.5s;
+}
+
+.box:hover {
+    ackground-color: blue;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100px);
+    }
+}
+
+.animated-box {
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    animation: slide 2s infinite;
+}                       </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CSS Borders -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="CssBorder">
+                    <button class="accordion-button collapsed color-css" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCssBorder" aria-expanded="false" aria-controls="collapseCssBorder">
+                        CSS Borders
+                    </button>
+                </h2>
+                <div id="collapseCssBorder" class="accordion-collapse collapse" aria-labelledby="CssBorder" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>Borders define the boundary of an element and can be styled with different widths, colors, and patterns.</p>
+                        <p>Border Properties:</p>
+                        <ul>
+                            <li><code class="codecolors">border</code> - Shorthand for border-width, border-style, and border-color.</li>
+                            <li><code class="codecolors">border-width</code> - Sets the width of the border (e.g., 1px, 2px).</li>
+                            <li><code class="codecolors">border-style</code> - Sets the style of the border (e.g., solid, dashed, dotted).</li>
+                            <li><code class="codecolors">border-color</code> - Sets the color of the border</li>
+                            <li><code class="codecolors">border-radius</code> - Rounds the corners of the border.</li>
+                        </ul>
+                        <p>CSS Borders Example:</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                        <pre><code class="code-color">.box {
+    border: 2px solid black; /* Shorthand for width, style, and color */
+    border-radius: 10px; /* Rounds the corners */
+}                       
+.solid-border {
+    border: 2px solid blue;
+}                       </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CSS Forms -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="cssforms">
+                    <button class="accordion-button collapsed color-css" type="button" data-bs-toggle="collapse" data-bs-target="#collapsecssforms" aria-expanded="false" aria-controls="collapsecssforms">
+                        CSS Forms
+                    </button>
+                </h2>
+                <div id="collapsecssforms" class="accordion-collapse collapse" aria-labelledby="cssforms" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>CSS can be used to style form elements like input fields, buttons, and labels to improve user experience.</p>
+                        <p>Form Properties:</p>
+                        <ul>
+                            <li><code class="codecolors">input[type="text"], input[type="password"]</code> - Styles text and password fields.</li>
+                            <li><code class="codecolors">textarea</code> - Styles multi-line text fields.</li>
+                            <li><code class="codecolors">button, input[type="button"], input[type="submit"]</code> - Styles buttons.</li>
+                        </ul>
+                        <p>CSS Forms Example:</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                        <pre><code class="code-color">input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}                       </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CSS Hover -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="html5">
+                    <button class="accordion-button collapsed color-css" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml5" aria-expanded="false" aria-controls="collapseHtml5">
+                        CSS Hover Effect
+                    </button>
+                </h2>
+                <div id="collapseHtml5" class="accordion-collapse collapse" aria-labelledby="html5" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>Hover effects allow elements to change style when the user hovers over them with a mouse, enhancing interactivity.</p>
+                        <p>Common Hover Effects:</p>
+                        <ul>
+                            <li>Changing color or background color.</li>
+                            <li>Transforming size, rotating, or moving elements.</li>
+                            <li>Adding box shadows or text decorations.</li>
+                        </ul>
+                        <p>CSS Hover Example:</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                        <pre><code class="code-color">.button:hover {
+    background-color: #005f6b; 
+    transform: scale(1.05);
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    transition: box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}                       </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CSS Dropdowns -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="cssdrop">
+                    <button class="accordion-button collapsed color-css" type="button" data-bs-toggle="collapse" data-bs-target="#collapsecssdrop" aria-expanded="false" aria-controls="collapsecssdrop">
+                        CSS Dropdown
+                    </button>
+                </h2>
+                <div id="collapsecssdrop" class="accordion-collapse collapse" aria-labelledby="cssdrop" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>Dropdowns are styled using CSS to create a more visually appealing and interactive menu.</p>
+                        <p>CSS Dropdown Example:</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                        <pre><code class="code-color">.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Button */
+.dropdown-button {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}                       </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CSS Media Queries -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="cssmedia">
+                    <button class="accordion-button collapsed color-css" type="button" data-bs-toggle="collapse" data-bs-target="#collapsecssmedia" aria-expanded="false" aria-controls="collapsecssmedia">
+                        CSS Media Queries
+                    </button>
+                </h2>
+                <div id="collapsecssmedia" class="accordion-collapse collapse" aria-labelledby="cssmedia" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>Media queries are used to apply different styles based on the device's screen size, resolution, or other characteristics.</p>
+                        <p>Key Properties:</p>
+                        <ul>
+                            <li><code class="codecolors">@media</code> - Specifies a media query.</li>
+                            <li><code class="codecolors">min-width</code> - Minimum screen width to apply styles.</li>
+                            <li><code class="codecolors">max-width</code> - Maximum screen width to apply styles</li>
+                            <li><code class="codecolors">orientation</code> - Sets rules based on the device orientation (portrait or landscape).</li>
+                        </ul>
+                        <p>CSS Media Queries Example:</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                        <pre><code class="code-color">/* Styles for screens wider than 600px */
+@media (min-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+/* Styles for screens narrower than 600px */
+@media (max-width: 600px) {
+    body {
+        background-color: lightgreen;
+    }
+}                       </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="text-center bg-black">
+    <div class="container">
+      <p>&copy; 2024 XANTYS. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
