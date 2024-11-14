@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Go - XANTYS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .hero {
+        background: url("https://github.com/yousufhk/Image-Xantys/blob/main/9.png?raw=true")
+          no-repeat center center;
+        background-size: cover;
+        color: white;
+        height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+    </style>
+    <script src="script.js"></script>
+  </head>
+  <body class="bg-dark text-white">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">XANTYS</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="html.html">Html</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="css.html">Css</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="javascript.html">Javascript</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="python.html">Python</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="c.html">C</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="go.html">Golang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>Javascript Essentials</h1>
+        <p>Interactive Excellence - Bringing Web Pages to Life</p>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container mt-4 ctn-div">
+
+      <div class="container my-3">
+        <button class="btn btn-outline-light" onclick="goBack()">← Back</button>
+      </div>
+
+      <!-- Chapter Structure -->
+      <div class="accordion mt-4" id="htmlChapters">
+        <!-- Introduction -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="intro">
+            <button
+              class="accordion-button color-js collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseIntro"
+              aria-expanded="false"
+              aria-controls="collapseIntro"
+            >
+              Introduction to JavaScript
+            </button>
+          </h2>
+          <div
+            id="collapseIntro"
+            class="accordion-collapse collapse"
+            aria-labelledby="intro"
+            data-bs-parent="#htmlChapters"
+          >
+            <div class="accordion-body">
+              <p>
+                JavaScript is a high-level, dynamic programming language
+                commonly used in web development. It allows you to implement
+                complex features on web pages, such as content updates,
+                interactive maps, animations, and much more.
+              </p>
+              <p>Basic JavaScript Structure</p>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">// Single-line comment: This is where the JavaScript code starts
+
+// Variable declaration
+let message = "Hello, World!"; // Using 'let' to define a variable
+
+// Function definition
+function greet() {
+    console.log(message); // Display the message in the console
+}
+
+// Function call
+greet(); // Call the function to execute the code
+
+/* 
+    Multi-line comment: You can add more functions, 
+    variables, and logic to build your JavaScript program 
+*/              </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- How to Link JS -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="basicTags">
+            <button
+              class="accordion-button collapsed color-js"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseBasicTags"
+              aria-expanded="false"
+              aria-controls="collapseBasicTags"
+            >
+              How to Link JS
+            </button>
+          </h2>
+          <div
+            id="collapseBasicTags"
+            class="accordion-collapse collapse"
+            aria-labelledby="basicTags"
+            data-bs-parent="#htmlChapters"
+          >
+            <div class="accordion-body">
+              <p>JavaScript can be added to HTML in three ways:</p>
+              <ul>
+                <li>
+                  <code class="codecolors">Inline</code> - Directly in the HTML
+                  element using the onclick attribute or similar.
+                </li>
+                <li>
+                  <code class="codecolors">Internal:</code> - Names given to
+                  variables, functions, etc. (e.g., main, myVariable).
+                </li>
+                <li>
+                  <code class="codecolors">External</code> - Every statement
+                  ends with a semicolon (;).
+                </li>
+                <li>
+                  <code class="codecolors">Curly Braces</code> - {} mark the
+                  beginning and end of functions or control blocks.
+                </li>
+              </ul>
+              <p>Examples:</p>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;JavaScript Link&lt;/title&gt;
+        &lt;script src="script.js"&gt;&lt;/script&gt; 
+        <!-- External JS file -->
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;JavaScript Example&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;  
+
+console.log('JavaScript is linked successfully!');</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Output -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="textFormatting">
+            <button
+              class="accordion-button collapsed color-js"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTextFormatting"
+              aria-expanded="false"
+              aria-controls="collapseTextFormatting"
+            >
+              Output
+            </button>
+          </h2>
+          <div
+            id="collapseTextFormatting"
+            class="accordion-collapse collapse"
+            aria-labelledby="textFormatting"
+            data-bs-parent="#htmlChapters"
+          >
+            <div class="accordion-body">
+              <p>JavaScript can display output in various ways:</p>
+              <ul>
+                <li>
+                  <code class="codecolors">console.log()</code> - Outputs to the
+                  browser console.
+                </li>
+                <li>
+                  <code class="codecolors">document.write()</code> - Writes
+                  directly into the HTML document (often used for testing).
+                </li>
+                <li>
+                  <code class="codecolors">alert()</code> - Displays an alert
+                  box with a message.
+                </li>
+                <li>
+                  <code class="codecolors">innerHTML</code> - Inserts content
+                  into an HTML element.
+                </li>
+              </ul>
+              <p>Example:</p>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">// Logs output to the console
+    console.log("Hello, World!"); 
+// Writes output to the document
+    document.write("This is document.write output!");
+// Shows an alert box
+    alert("This is an alert!");</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comments -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="linksAndImages">
+            <button
+              class="accordion-button collapsed color-js"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseLinksAndImages"
+              aria-expanded="false"
+              aria-controls="collapseLinksAndImages"
+            >
+              Comments
+            </button>
+          </h2>
+          <div
+            id="collapseLinksAndImages"
+            class="accordion-collapse collapse"
+            aria-labelledby="linksAndImages"
+            data-bs-parent="#htmlChapters"
+          >
+            <div class="accordion-body">
+              <p>
+                Comments are used to describe code and make it easier to
+                understand.
+              </p>
+              <p>Types of Comments:</p>
+              <ul>
+                <li>
+                  <code class="codecolors">Single-line Comments</code> - Begin
+                  with // and extend to the end of the line.
+                </li>
+                <li>
+                  <code class="codecolors">Multi-line Comments</code> - Enclosed
+                  between /* and */
+                </li>
+              </ul>
+              <p>Example:</p>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">// This is a single-line comment
+let x = 10; 
+/* This is a multi-line comment */</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Variables -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="lists">
+            <button
+              class="accordion-button collapsed color-js"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseLists"
+              aria-expanded="false"
+              aria-controls="collapseLists"
+            >
+              Variables
+            </button>
+          </h2>
+          <div
+            id="collapseLists"
+            class="accordion-collapse collapse"
+            aria-labelledby="lists"
+            data-bs-parent="#htmlChapters"
+          >
+            <div class="accordion-body">
+              <p>
+                Variables store data values and can be declared using var, let,
+                or const.
+              </p>
+              <ul>
+                <li>
+                  <code class="codecolors">let</code> - Declares block-scoped
+                  variables that can be reassigned.
+                </li>
+                <li>
+                  <code class="codecolors">const</code> - Declares block-scoped
+                  variables that cannot be reassigned.
+                </li>
+              </ul>
+              <p>Example:</p>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">var x = 5; // Using var
+let y = 10;  // Using let
+const z = 15; // Using const</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Operators -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="tables">
+            <button
+              class="accordion-button collapsed color-js"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTables"
+              aria-expanded="false"
+              aria-controls="collapseTables"
+            >
+              Operators
+            </button>
+          </h2>
+          <div
+            id="collapseTables"
+            class="accordion-collapse collapse"
+            aria-labelledby="tables"
+            data-bs-parent="#htmlChapters"
+          >
+            <div class="accordion-body">
+              <p>
+                JavaScript operators are used to perform operations on variables
+                and values.
+              </p>
+              <p>Types of Operators:</p>
+              <ul>
+                <li>
+                  <code class="codecolors">Arithmetic:</code> Perform
+                  mathematical calculations. (+, -, *, /, %)
+                </li>
+                <li>
+                  <code class="codecolors">Assignment:</code> Assign values to
+                  variables. (=, +=, -=)
+                </li>
+                <li>
+                  <code class="codecolors">Comparison:</code> Compare values of
+                  two variables ==, ===, <, >
+                </li>
+                <li>
+                  <code class="codecolors">Logical:</code> Combine conditions to
+                  control the flow of your code based on true or false values.
+                  (&&, ||, !)
+                </li>
+              </ul>
+              <p>Example:</p>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">let a = 10 + 5; // Arithmetic operator
+let a = 10; // Assigns 10 to variable a
+let b = a == 15; // Comparison operator
+let result = (a > 5) && (b < 30); 
+// Checks if both conditions are true</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data Types -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="forms">
+            <button
+              class="accordion-button collapsed color-js"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseForms"
+              aria-expanded="false"
+              aria-controls="collapseForms"
+            >
+              Data Types
+            </button>
+          </h2>
+          <div
+            id="collapseForms"
+            class="accordion-collapse collapse"
+            aria-labelledby="forms"
+            data-bs-parent="#htmlChapters"
+          >
+            <div class="accordion-body">
+              <p>JavaScript supports various data types, including:</p>
+              <ul>
+                <li><code class="codecolors">String</code> - Text ("Hello")</li>
+                <li>
+                  <code class="codecolors">Number</code> - Numeric values (42)
+                </li>
+                <li><code class="codecolors">Boolean</code> - true or false</li>
+                <li>
+                  <code class="codecolors">Object</code> - Collection of
+                  key-value pairs
+                </li>
+                <li>
+                  <code class="codecolors">Array</code> - Ordered list of values
+                </li>
+              </ul>
+              <p>Example:</p>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">let text = "Hello"; // String
+let number = 100;  // Number
+let isActive = true; // Boolean</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Functions -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="media">
+            <button
+              class="accordion-button collapsed color-js"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseMedia"
+              aria-expanded="false"
+              aria-controls="collapseMedia"
+            >
+              Functions
+            </button>
+          </h2>
+          <div
+            id="collapseMedia"
+            class="accordion-collapse collapse"
+            aria-labelledby="media"
+            data-bs-parent="#htmlChapters"
+          >
+            <div class="accordion-body">
+              <p>
+                Functions are blocks of code designed to perform a particular
+                task and are executed when invoked.
+              </p>
+              <p>Example:</p>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">function greet(name) {
+    console.log("Hello, " + name + "!");
+}
+
+greet("Alice"); // Calls the function and outputs "Hello, Alice!"</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Objects -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="semantic">
+            <button
+              class="accordion-button collapsed color-js"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseSemantic"
+              aria-expanded="false"
+              aria-controls="collapseSemantic"
+            >
+              Objects
+            </button>
+          </h2>
+          <div
+            id="collapseSemantic"
+            class="accordion-collapse collapse"
+            aria-labelledby="semantic"
+            data-bs-parent="#htmlChapters"
+          >
+            <div class="accordion-body">
+              <p>
+                JavaScript objects are collections of properties, defined as
+                key-value pairs.
+              </p>
+              <p>Example:</p>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">let person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 25
+};            </code></pre>
+              </div>
+              <p class="space-div"><strong>Object Properties:</strong></p>
+              <p>
+                Properties are the values associated with a JavaScript object.
+              </p>
+              <p>Example:</p>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">let car = { brand: "Toyota", model: "Corolla", year: 2020 };
+console.log(car.model); // Outputs "Corolla"</code></pre>
+              </div>
+              <p class="space-div"><strong>Object Methods:</strong></p>
+              <p>Methods are functions stored as object properties.</p>
+              <p>Example:</p>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">let person = {
+  firstName: "John",
+  lastName: "Doe",
+  fullName: function() {
+      return this.firstName + " " + this.lastName;
+  }
+};
+
+console.log(person.fullName()); // Outputs "John Doe"</code></pre>
+              </div>
+              <p class="space-div"><strong>Object Display:</strong></p>
+              <p>
+                Objects can be displayed using console.log(), or converting to
+                strings.
+              </p>
+              <p>Example:</p>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">let car = { brand: "Toyota", model: "Corolla" };
+console.log(car); // Displays the object in the console</code></pre>
+              </div>
+              <p class="space-div"><strong>Object Constructors:</strong></p>
+              <p>Constructors are special functions used to create objects.</p>
+              <p>Example:</p>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">function Car(brand, model) {
+  this.brand = brand;
+  this.model = model;
+}
+
+let myCar = new Car("Toyota", "Camry");
+console.log(myCar.brand); // Outputs "Toyota"</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--  Events -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="CssBorder">
+            <button
+              class="accordion-button collapsed color-js"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseCssBorder"
+              aria-expanded="false"
+              aria-controls="collapseCssBorder"
+            >
+              Events
+            </button>
+          </h2>
+          <div
+            id="collapseCssBorder"
+            class="accordion-collapse collapse"
+            aria-labelledby="CssBorder"
+            data-bs-parent="#htmlChapters"
+          >
+            <div class="accordion-body">
+              <p>
+                JavaScript can handle various events like clicks, hovers, and
+                form submissions.
+              </p>
+              <p>Example:</p>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">document.getElementById("myButton").onclick = function() {
+  alert("Button clicked!");
+};            </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--  Strings -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="cssforms">
+            <button
+              class="accordion-button collapsed color-js"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapsecssforms"
+              aria-expanded="false"
+              aria-controls="collapsecssforms"
+            >
+              Strings
+            </button>
+          </h2>
+          <div
+            id="collapsecssforms"
+            class="accordion-collapse collapse"
+            aria-labelledby="cssforms"
+            data-bs-parent="#htmlChapters"
+          >
+            <div class="accordion-body">
+              <p>Strings are sequences of characters used for storing text.</p>
+              <p>Example:</p>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">let greeting = "Hello, World!";
+console.log(greeting);</code></pre>
+              </div>
+              <p class="space-div"><strong>String Methods:</strong></p>
+              <p>
+                String methods are built-in functions to manipulate strings.
+              </p>
+              <p>Common Methods:</p>
+              <ul>
+                <li>
+                  <code class="codecolors">length:</code> Returns the length of
+                  the string.
+                </li>
+                <li>
+                  <code class="codecolors">toUpperCase():</code> Converts string
+                  to uppercase.
+                </li>
+                <li>
+                  <code class="codecolors">toLowerCase():</code> Converts string
+                  to lowercase.
+                </li>
+              </ul>
+              <p>Example:</p>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">let text = "Hello, World!";
+console.log(text.toUpperCase()); // Outputs "HELLO, WORLD!"</code></pre>
+              </div>
+              <p class="space-div"><strong>String Search:</strong></p>
+              <p>JavaScript provides methods to search for strings.</p>
+              <ul>
+                <li>
+                  <code class="codecolors">indexOf():</code> Returns the index
+                  of the first occurrence.
+                </li>
+                <li>
+                  <code class="codecolors">includes():</code> Checks if a string
+                  contains another string.
+                </li>
+              </ul>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">let text = "Hello, World!";
+console.log(text.indexOf("World")); // Outputs 7 </code></pre>
+              </div>
+              <p class="space-div"><strong>String Templates:</strong></p>
+              <p>
+                Template literals allow for multi-line strings and string
+                interpolation.
+              </p>
+              <p>Example</p>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">let name = "Alice";
+let message = `Hello, ${name}! Welcome to JavaScript.`;
+console.log(message);</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Numbers  -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="html5">
+            <button
+              class="accordion-button collapsed color-js"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseHtml5"
+              aria-expanded="false"
+              aria-controls="collapseHtml5"
+            >
+              Numbers
+            </button>
+          </h2>
+          <div
+            id="collapseHtml5"
+            class="accordion-collapse collapse"
+            aria-labelledby="html5"
+            data-bs-parent="#htmlChapters"
+          >
+            <div class="accordion-body">
+              <p>Numbers represent numeric values.</p>
+              <p>Example:</p>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">let x = 42;
+let y = 3.14;</code></pre>
+              </div>
+              <p class="space-div"><strong>Number Methods:</strong></p>
+              <p>Number methods allow you to manipulate numeric values.</p>
+              <ul>
+                <li>
+                  <code class="codecolors">toSring(): </code>Converts a number
+                  to a string.
+                </li>
+                <li>
+                  <code class="codecolors">toFixed(): </code>Formats a number
+                  with a specified number of decimals.
+                </li>
+              </ul>
+              <p>Example:</p>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">let num = 5.6789;
+console.log(num.toFixed(2)); // Outputs "5.68"</code></pre>
+              </div>
+              <p class="space-div"><strong>Number Properties:</strong></p>
+              <p>Number properties provide constants related to numbers.</p>
+              <p>Example:</p>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">console.log(Number.MAX_VALUE); // Outputs the largest possible number</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Arrays -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="cssdrop">
+            <button
+              class="accordion-button collapsed color-js"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapsecssdrop"
+              aria-expanded="false"
+              aria-controls="collapsecssdrop"
+            >
+              Arrays
+            </button>
+          </h2>
+          <div
+            id="collapsecssdrop"
+            class="accordion-collapse collapse"
+            aria-labelledby="cssdrop"
+            data-bs-parent="#htmlChapters"
+          >
+            <div class="accordion-body">
+              <p>Arrays store multiple values in a single variable.</p>
+              <p>Example:</p>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">let colors = ["Red", "Green", "Blue"];
+console.log(colors[0]); // Outputs "Red"</code></pre>
+              </div>
+              <div class="accordion-body">
+                <p><strong>Array Methods:</strong></p>
+                <p>Array methods allow you to manipulate arrays.</p>
+                <ul>
+                  <li>
+                    <code class="codecolors">push(): </code>Adds an item to the
+                    end.
+                  </li>
+                  <li>
+                    <code class="codecolors">pop(): </code>Removes the last
+                    item.
+                  </li>
+                  <li>
+                    <code class="codecolors">shift(): </code>Removes the first
+                    item.
+                  </li>
+                  <li>
+                    <code class="codecolors">unshift(): </code>Adds an item to
+                    the beginning.
+                  </li>
+                </ul>
+                <p>Example:</p>
+                <div class="container-code">
+                  <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                    </svg></button>
+                  <pre><code class="code-color">let fruits = ["Apple", "Banana"];
+fruits.push("Orange");
+console.log(fruits); // Outputs ["Apple", "Banana", "Orange"]</code></pre>
+                </div>
+                <p class="space-div"><strong>Array Search:</strong></p>
+                <p>Search methods locate items in arrays.</p>
+                <ul>
+                  <li>
+                    <code class="codecolors">indexOf(): </code>Finds the index
+                    of the first occurrence.
+                  </li>
+                  <li>
+                    <code class="codecolors">includes(): </code>Checks if an
+                    array contains a value.
+                  </li>
+                </ul>
+                <p>Example:</p>
+                <div class="container-code">
+                  <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                    </svg></button>
+                  <pre><code class="code-color">let fruits = ["Apple", "Banana", "Orange"];
+console.log(fruits.includes("Banana")); // Outputs true</code></pre>
+                </div>
+                <p class="space-div"><strong>Array Sort:</strong></p>
+                <p>Sorting methods arrange array elements.</p>
+                <p>Example:</p>
+                <div class="container-code">
+                  <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                    </svg></button>
+                  <pre><code class="code-color">let numbers = [4, 2, 5, 1, 3];
+numbers.sort();
+console.log(numbers); // Outputs [1, 2, 3, 4, 5]</code></pre>
+                </div>
+                <p class="space-div"><strong>Array Iteration:</strong></p>
+                <p>Iterate over arrays using loops and built-in methods.</p>
+                <p>Example:</p>
+                <div class="container-code">
+                  <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                    </svg></button>
+                  <pre><code class="code-color">let fruits = ["Apple", "Banana", "Orange"];
+fruits.forEach((fruit) => console.log(fruit)); // Outputs each fruit</code></pre>
+                </div>
+                <p class="space-div"><strong>Array Const:</strong></p>
+                <p>Arrays declared with const can still be modified.</p>
+                <p>Example:</p>
+                <div class="container-code">
+                  <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                    </svg></button>
+                  <pre><code class="code-color">const cars = ["Toyota", "BMW"];
+cars.push("Audi"); // Adding new item is allowed
+console.log(cars);</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Random -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="cssmedia">
+            <button
+              class="accordion-button collapsed color-js"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapsecssmedia"
+              aria-expanded="false"
+              aria-controls="collapsecssmedia"
+            >
+              Random
+            </button>
+          </h2>
+          <div
+            id="collapsecssmedia"
+            class="accordion-collapse collapse"
+            aria-labelledby="cssmedia"
+            data-bs-parent="#htmlChapters"
+          >
+            <div class="accordion-body">
+              <p>Generate random numbers using Math.random().</p>
+
+              <p>Example:</p>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">let randomNum = Math.random(); // Outputs a random number between 0 and 1
+console.log(randomNum);</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comparisons -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="strings">
+            <button
+              class="accordion-button collapsed color-js"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapsestrings"
+              aria-expanded="false"
+              aria-controls="collapsestrings"
+            >
+              Comparisons
+            </button>
+          </h2>
+          <div
+            id="collapsestrings"
+            class="accordion-collapse collapse"
+            aria-labelledby="strings"
+            data-bs-parent="#htmlChapters"
+          >
+            <div class="accordion-body">
+              <p>Comparison operators compare values.</p>
+              <p>Operators:</p>
+              <ul>
+                <li><code class="codecolors">==</code>: Equal to</li>
+                <li><code class="codecolors">===</code>: Strictly equal</li>
+                <li><code class="codecolors">!=</code>: Not equal</li>
+                <li><code class="codecolors">!==</code>: Strictly not equal</li>
+                <li>
+                  <code class="codecolors"><, >, <=, >=</code>: Less than, greater
+                  than, etc.
+                </li>
+              </ul>
+              <p>Example:</p>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">let x = 10;
+console.log(x == 10); // Outputs true </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- If Else -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="pointers">
+            <button
+              class="accordion-button collapsed color-js"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapsepointers"
+              aria-expanded="false"
+              aria-controls="collapsepointers"
+            >
+              If-Else Statement
+            </button>
+          </h2>
+          <div
+            id="collapsepointers"
+            class="accordion-collapse collapse"
+            aria-labelledby="pointers"
+            data-bs-parent="#htmlChapters"
+          >
+            <div class="accordion-body">
+              <p>Conditional statements perform actions based on conditions.</p>
+              <p>Example:</p>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">let score = 85;
+if (score > 90) {
+    console.log("Excellent");
+} else {
+    console.log("Good");
+}</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Switch Statement -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="userinput">
+            <button
+              class="accordion-button collapsed color-js"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseuserinput"
+              aria-expanded="false"
+              aria-controls="collapseuserinput"
+            >
+              Switch Statement
+            </button>
+          </h2>
+          <div
+            id="collapseuserinput"
+            class="accordion-collapse collapse"
+            aria-labelledby="userinput"
+            data-bs-parent="#htmlChapters"
+          >
+            <div class="accordion-body">
+              <p>
+                The switch statement performs actions based on multiple
+                conditions.
+              </p>
+              <p>Example:</p>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">let fruit = "Apple";
+switch (fruit) {
+  case "Apple":
+    console.log("Apples are red!");
+    break;
+  case "Banana":
+    console.log("Bananas are yellow!");
+    break;
+  default:
+    console.log("Unknown fruit.");
+}             </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- For Loop -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="memaddress">
+            <button
+              class="accordion-button collapsed color-js"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapsememaddress"
+              aria-expanded="false"
+              aria-controls="collapsememaddress"
+            >
+              For Loop
+            </button>
+          </h2>
+          <div
+            id="collapsememaddress"
+            class="accordion-collapse collapse"
+            aria-labelledby="memaddress"
+            data-bs-parent="#htmlChapters"
+          >
+            <div class="accordion-body">
+              <p>
+                for loops repeat a block of code a specific number of times.
+              </p>
+              <p>Example:</p>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">for (let i = 0; i < 5; i++) {
+  console.log("Number: " + i);
+}             </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- While Loop and Break-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="whileloop">
+            <button
+              class="accordion-button collapsed color-js"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapsewhileloop"
+              aria-expanded="false"
+              aria-controls="collapsewhileloop"
+            >
+              While Loop and Break Statement
+            </button>
+          </h2>
+          <div
+            id="collapsewhileloop"
+            class="accordion-collapse collapse"
+            aria-labelledby="whileloop"
+            data-bs-parent="#htmlChapters"
+          >
+            <div class="accordion-body">
+              <p>
+                while loops repeat a block of code as long as a condition is
+                true.
+              </p>
+              <p>Example:</p>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">let i = 0;
+while (i < 5) {
+  console.log(i);
+  i++;
+}             </code></pre>
+              </div>
+              <p class="space-div"><strong>
+                Break Statement
+              </p></strong>
+              <p>The break statement exits a loop or switch.</p>
+              <p>Example:</p>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">lfor (let i = 0; i < 10; i++) {
+  if (i === 5) {
+      break; // Stops the loop when i is 5
+  }
+  console.log(i);
+}              </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Iterables -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="iterables">
+            <button
+              class="accordion-button collapsed color-js"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseiterables"
+              aria-expanded="false"
+              aria-controls="collapseiterables"
+            >
+            Iterables
+            </button>
+          </h2>
+          <div
+            id="collapseiterables"
+            class="accordion-collapse collapse"
+            aria-labelledby="iterables"
+            data-bs-parent="#htmlChapters"
+          >
+            <div class="accordion-body">
+              <p>
+                Iterables are data structures that allow you to access their elements sequentially.
+              </p>
+              <p>Example:</p>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">let myString = "Hello";
+for (let char of myString) {
+  console.log(char);
+}</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sets -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="sets">
+            <button
+              class="accordion-button collapsed color-js"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapsesets"
+              aria-expanded="false"
+              aria-controls="collapsesets"
+            >
+            Sets
+            </button>
+          </h2>
+          <div
+            id="collapsesets"
+            class="accordion-collapse collapse"
+            aria-labelledby="sets"
+            data-bs-parent="#htmlChapters"
+          >
+            <div class="accordion-body">
+              <p>Sets store unique values of any type.</p>
+              <p>Example:</p>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">let mySet = new Set();
+mySet.add(1);
+mySet.add(5);
+mySet.add(5); // Duplicate value, not added
+console.log(mySet); // Outputs Set { 1, 5 }</code></pre>
+              </div>
+              <p class="space-div"><strong>Set Methods:</strong></p>
+              <p>Methods to manipulate Set objects.</p>
+              <p>Example:</p>
+              <div class="container-code">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                  </svg></button>
+                <pre><code class="code-color">llet set = new Set(["a", "b", "c"]);
+set.delete("b"); // Removes "b"
+console.log(set); // Outputs Set { 'a', 'c' }</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="text-center bg-black">
+      <div class="container">
+        <p>&copy; 2024 XANTYS. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

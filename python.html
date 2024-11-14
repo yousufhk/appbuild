@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Go - XANTYS</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .hero {
+        background: url("https://github.com/yousufhk/Image-Xantys/blob/main/17.png?raw=true")
+            no-repeat center center;
+        background-size: cover;
+        color: white;
+        height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        }
+    </style>
+    <script src="script.js"></script>
+</head>
+<body class="bg-dark text-white">
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">XANTYS</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">Courses</a>
+                          </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="html.html">Html</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="css.html">Css</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="javascript.html">Javascript</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" href="python.html">Python</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="c.html">C</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="go.html">Golang</a> 
+                        </li> 
+                        <li class="nav-item">
+                          <a class="nav-link" href="about.html">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+        <h1>Python Foundations</h1>
+        <p>Simplicity Meets Power - Code Smarter, Not Harder</p>
+        </div>
+    </section>
+
+    <div class="container mt-4 ctn-div">
+
+        <div class="container my-3">
+            <button class="btn btn-outline-light" onclick="goBack()">← Back</button>
+        </div>
+        
+        <!-- Chapter Structure -->
+        <div class="accordion mt-4" id="htmlChapters">
+
+            <!-- Introduction -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="intro">
+                    <button class="accordion-button colors-python collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIntro" aria-expanded="false" aria-controls="collapseIntro">
+                        Introduction to Python
+                    </button>
+                </h2>
+                <div id="collapseIntro" class="accordion-collapse collapse" aria-labelledby="intro" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>Python is a high-level, interpreted programming language known for its readability and simplicity. It's widely used in web development, data analysis, artificial intelligence, scientific computing, and more.</p>
+                        <p>Basic Python Structure:</p>
+                        <p>Python code is typically written in .py files. The code is executed line by line. Python uses indentation to define blocks of code.</p>
+                        <p>Example :</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                          <pre><code class="code-color"># This is a comment
+print("Hello, World!")  # This line prints text to the console</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Variables and Data Types -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="basicTags">
+                    <button class="accordion-button collapsed colors-python" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBasicTags" aria-expanded="false" aria-controls="collapseBasicTags">
+                        Python Variables and Data Types
+                    </button>
+                </h2>
+                <div id="collapseBasicTags" class="accordion-collapse collapse" aria-labelledby="basicTags" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>Variables in Python are used to store data. Python supports several data types:</p>
+                            <ul>
+                                <li><code class="codecolors">Integer</code> - Whole numbers (e.g., 5, -3)</li>
+                                <li><code class="codecolors">Float</code> - Decimal numbers (e.g., 3.14, -0.001)</li>
+                                <li><code class="codecolors">String</code> - Sequence of characters (e.g., "Hello", 'Python')</li>
+                                <li><code class="codecolors">Boolean</code> - Represents True or False</li>                        
+                            </ul> 
+                            <p>Example :</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                            <pre><code class="code-color">age = 25  # Integer
+height = 5.9  # Float
+name = "Alice"  # String
+is_student = True # Boolean</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Input -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="userinput">
+                    <button class="accordion-button collapsed colors-python" type="button" data-bs-toggle="collapse" data-bs-target="#collapseuserinput" aria-expanded="false" aria-controls="collapseuserinput">
+                        User Input
+                    </button>
+                </h2>
+                <div id="collapseuserinput" class="accordion-collapse collapse" aria-labelledby="userinput" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>User input in Python allows you to gather data from the user during program execution, typically using the input() function, which reads text entered by the user as a string.</p>
+                        <p>Example:</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                            <pre><code class="code-color"># Prompt the user to enter their name
+name = input("Enter your name: ")
+
+# Display a greeting message
+print(f"Hello, {name}!")</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Operators -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="textFormatting">
+                    <button class="accordion-button collapsed colors-python" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTextFormatting" aria-expanded="false" aria-controls="collapseTextFormatting">
+                        Python Operators
+                    </button>
+                </h2>
+                <div id="collapseTextFormatting" class="accordion-collapse collapse" aria-labelledby="textFormatting" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>Operators are used to perform operations on variables and values.</p>
+                        <p>Types of Operators:</p>
+                        <ul>
+                            <li><code class="codecolors">Arithmetic Operators:</code> - +, -, , /, %, , //                            </li>
+                            <li><code class="codecolors">Comparison Operators:</code> ==, !=, >, <, >=, <=                            </li>
+                            <li><code class="codecolors">Logical Operators:</code> and, or, not                            </li>
+                            <li><code class="codecolors">Assignment Operators:</code> =, +=, -=, =, /=                            </li>                        
+                        </ul>
+                        <p>Example:</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                        <pre><code class="code-color">x = 10
+y = 5
+
+# Arithmetic
+sum = x + y         # 15
+product = x  y     # 50
+
+# Comparison
+is_equal = (x == y) # False
+
+# Logical
+result = (x > 5) and (y < 10)  # True</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--  Control Structures -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="linksAndImages">
+                    <button class="accordion-button collapsed colors-python" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLinksAndImages" aria-expanded="false" aria-controls="collapseLinksAndImages">
+                        Conditional Statements and Control Structures
+                    </button>
+                </h2>
+                <div id="collapseLinksAndImages" class="accordion-collapse collapse" aria-labelledby="linksAndImages" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>Conditional statements enable you to make decisions in your code by executing different actions based on specific conditions</p>
+                        <ul>
+                            <li>if-else :</li>
+                            <p>The<code class="codecolors"> if, elif, else </code> are used for decision making </p>
+                            <p>Example:</p>
+                            <div class="container-code">
+                                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                    </svg></button>
+                            <pre class=""><code class="code-color">age = 18
+if age < 18:
+    print("Minor")
+elif age == 18:
+    print("Just an adult")
+else:
+    print("Adult")</code></pre>
+                            </div>
+                            <p class="space-div">Control structures allow you to manage the flow of execution in your code.</p>
+                            <li>Loops: </li>
+                            <p>The loop is used to iterate a block of code for teh specified number of time.</p>
+                                <ul>
+                                    <li><code class="codecolors">For Loop:</code> Iterates over a sequence (like a list or range).</li>
+                                    <li><code class="codecolors">While Loop:</code> Repeats as long as a condition is true.                                .</li>
+                                </ul>
+                                <p class="space-div">Example:</p>
+                                <div class="container-code"> 
+                                    <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                        </svg></button>
+                                <pre class=""><code class="code-color"># For loop
+for i in range(5):
+    print(i)  # 0, 1, 2, 3, 4
+
+# While loop
+count = 0
+while count < 5:
+    print(count)  # 0, 1, 2, 3, 4
+    count += 1</code></pre>
+                                </div>  
+                            </ul>                
+                        </div>
+                    </div>
+                </div>
+
+            <!--  Functions -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="lists">
+                    <button class="accordion-button collapsed colors-python" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLists" aria-expanded="false" aria-controls="collapseLists">
+                        Functions
+                    </button>
+                </h2>
+                <div id="collapseLists" class="accordion-collapse collapse" aria-labelledby="lists" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>Functions are blocks of code designed to perform a specific task and can be reused.</p>
+                        <ul>
+                            <li><code class="codecolors">Defining a Function:</code> Unordered list (bulleted).</li>
+                        </ul>
+                        <p>Function Example:</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                        <pre><code class="code-color">def greet(name):
+    return f"Hello, {name}!"
+print(greet("Alice"))  # Output: Hello, Alice!
+                        </code></pre>
+                        </div>
+                        <p class="space-div"><strong>Lambda Function: </strong></p>
+                        </ul>
+                        <p>Lambda functions are anonymous, single-line functions that allow you to write quick, concise operations without defining a full function using the `def` keyword.</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                        <pre><code class="code-color">add = lambda x, y: x + y
+print(add(5, 3))  # Output: 8</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Structures -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="tables">
+                    <button class="accordion-button collapsed colors-python" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTables" aria-expanded="false" aria-controls="collapseTables">
+                        Data Strucure in Python
+                    </button>
+                </h2>
+                <div id="collapseTables" class="accordion-collapse collapse" aria-labelledby="tables" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>Python provides several built-in data structures for storing collections of data.</p>
+                        <ul>
+                            <li><code class="codecolors">List:</code> Ordered, mutable collections of items.</li>
+                            <p>Example :</p>
+                            <div class="container-code">
+                                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                    </svg></button>
+                                <pre><code class="code-color">fruits = ["apple", "banana", "cherry"]
+fruits.append("date")  # Adds 'date' to the list</code></pre>
+                            </div>
+                            <li class="space-div"><code class="codecolors">Tuple:</code> Ordered, immutable collections of items.</li>
+                            <p>Example :</p>
+                            <div class="container-code">
+                                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                    </svg></button>
+                                <pre><code class="code-color">dimensions = (20, 40, 60)</code></pre>
+                            </div> 
+                            <li class="space-div"><code class="codecolors">Sets:</code> Unordered collections of unique items.</li>
+                            <p>Example :</p>
+                            <div class="container-code">
+                                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                    </svg></button>
+                                <pre><code class="code-color">numbers = {1, 2, 3, 3, 4}  # {1, 2, 3, 4}</code></pre>
+                            </div>
+                            <li class="space-div"><code class="codecolors">Dictionaries:</code> Unordered collections of key-value pairs.</li>
+                            <p>Example :</p>
+                            <div class="container-code">
+                                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                    </svg></button>
+                                <pre><code class="code-color">student = {"name": "John", "age": 20}
+student["age"] = 21  # Updates age</code></pre>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--   File Handling -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="forms">
+                    <button class="accordion-button collapsed colors-python" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForms" aria-expanded="false" aria-controls="collapseForms">
+                        File Handling
+                    </button>
+                </h2>
+                <div id="collapseForms" class="accordion-collapse collapse" aria-labelledby="forms" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p> Python allows you to work with files for reading and writing data.</p>
+                        <p>Opening and Reading a File:</p>
+                            <div class="container-code">
+                                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                    </svg></button>
+                                <pre><code class="code-color"># Reading a file
+with open('example.txt', 'r') as file:
+    content = file.read()
+    print(content)
+
+#Writing to a File:
+with open('example.txt', 'w') as file:
+    file.write("Hello, World!")</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- Modules and Packages -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="media">
+                    <button class="accordion-button collapsed colors-python" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMedia" aria-expanded="false" aria-controls="collapseMedia">
+                        Modules and Packages                    
+                    </button>
+                </h2>
+                <div id="collapseMedia" class="accordion-collapse collapse" aria-labelledby="media" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>Modules are files containing Python code that can be imported into other Python scripts.                        </p>
+                        <p>Step 1: Create a module.</p>
+                        <p>Example :</p>
+                            <div class="container-code">
+                                <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                    </svg></button>
+                            <pre><code class="code-color">def greet(name):
+return f"Hello, {name}!"</code></pre>
+                            </div>
+                        <p class="space-div">Step 2: Import a module and use it.</p>
+                        <p>Example :</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                        <pre><code class="code-color">import mymodule
+ print(mymodule.greet("Alice"))  # Output: Hello, Alice!</code></pre>
+                        </div>
+                        <p class="space-div"><strong>Package: </strong></code></p>
+                        <p>A package in Python is a collection of modules organized in directories that provides reusable code, which makes it easier to maintain and share large projects. Packages are directories that contain a special _init_.py file, which allows the directory to be treated as a package.</p>
+                        <p>Example :</p>
+                    <div class="container-code">
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                            </svg></button>
+                    <pre><code class="code-color">import numpy as np
+array = np.array([1, 2, 3, 4])
+print(array)  # Output: [1 2 3 4]</code></pre>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Exception Handling -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="semantic">
+                    <button class="accordion-button collapsed colors-python" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSemantic" aria-expanded="false" aria-controls="collapseSemantic">
+                        Exception Handling
+                    </button>
+                </h2>
+                <div id="collapseSemantic" class="accordion-collapse collapse" aria-labelledby="semantic" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>Exceptions are errors that occur during execution. You can handle them using try, except, finally blocks.</p>
+                        <p> Exception Handling Example:</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                        <pre><code class="code-color">try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+finally:
+    print("Execution finished.")</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Classes and Objects -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="html5">
+                    <button class="accordion-button collapsed colors-python" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml5" aria-expanded="false" aria-controls="collapseHtml5">
+                        Classes and Objects
+                    </button>
+                </h2>
+                <div id="collapseHtml5" class="accordion-collapse collapse" aria-labelledby="html5" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>Python supports object-oriented programming. You can define classes and create objects.</p>
+                        <p>Defining a class Example:</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                        <pre><code class="code-color">class Person:
+def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+def greet(self):
+    return f"Hello, my name is {self.name} and I am {self.age} years old."
+
+# Creating an Object
+person1 = Person("Alice", 30)
+print(person1.greet())  # Output: Hello, my name is Alice and I am 30 years old.</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--List Comprehension -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="list">
+                    <button class="accordion-button collapsed colors-python" type="button" data-bs-toggle="collapse" data-bs-target="#collapselist" aria-expanded="false" aria-controls="collapselist">
+                        List comprehension
+                    </button>
+                </h2>
+                <div id="collapselist" class="accordion-collapse collapse" aria-labelledby="list" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>List comprehensions provide a concise way to create lists.</p>
+                        <p> Example:</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                            <pre><code class="code-color">squares = [x2 for x in range(10)]
+print(squares)  # Output: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Genrators -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="list">
+                    <button class="accordion-button collapsed colors-python" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGenerators" aria-expanded="false" aria-controls="collapseGenerators">
+                        Generators
+                    </button>
+                </h2>
+                <div id="collapseGenerators" class="accordion-collapse collapse" aria-labelledby="Generators" data-bs-parent="#htmlChapters">
+                    <div class="accordion-body">
+                        <p>Generators are iterators that allow you to iterate over a sequence of values, but generate items on the fly.</p>
+                        <p> Example:</p>
+                        <div class="container-code">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="bi bi-clipboard"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                </svg></button>
+                            <pre><code class="code-color">def countdown(n):
+    while n > 0:
+        yield n
+        n -= 1
+
+for number in countdown(5):
+    print(number)</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="text-center bg-black">
+    <div class="container">
+      <p>&copy; 2024 XANTYS. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
